@@ -1,0 +1,16 @@
+*
+* Copyright IBM Corp. 2025, 2026
+* SPDX-License-Identifier: Apache-2.0
+*
+.subckt twosource n1 n2 PARAMS: waveform_file="nothing"
+
+* filesource instance
+A1 %vd([n1 n2]) filesrc
+
+* filesource interpolating model 
+.model filesrc filesource (file={waveform_file}
++ amploffset=[0] amplscale=[1]
++ timeoffset=0 timescale=1
++ timerelative=false amplstep=false)
+
+.ends

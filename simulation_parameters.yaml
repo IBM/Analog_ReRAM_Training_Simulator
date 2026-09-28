@@ -1,0 +1,30 @@
+
+# Simulation parameters to be loaded in the main including ReRAM device switching parameters and waveforms (voltage-time) parameters
+
+# Rise time of pulses applied through bitlines (ReRAM Top Electrode) and sourcelines (n-type FET Source)
+T_RISE: 750e-9
+# Rise time of pulses applied through wordlines (n-type FET Gate)
+T_RISE_GATE: 250e-9
+# Pulse width of programming pulses applied through bitlines (ReRAM Top Electrode) and sourcelines (n-type FET Source)
+T_WRITE: 1e-6
+# Pulse width of reading pulses applied through bitlines (ReRAM Top Electrode) and sourcelines (n-type FET Source)
+T_READ: 1e-6
+# Waiting time between subsequent pulses
+T_WAIT: 200e-9
+# SET voltage (for conductance up) during programming pulses applied through bitlines (ReRAM Top Electrode) and sourcelines (n-type FET Source)
+V_SET: 1.35
+# RESET voltage (for conductance down) during programming pulses applied through bitlines (ReRAM Top Electrode) and sourcelines (n-type FET Source)
+V_RESET: 1.3
+# READ voltage (for conductance check) during reading pulses applied through bitlines (ReRAM Top Electrode) and sourcelines (n-type FET Source)
+V_READ: 200e-3
+# Gate voltage (during programming SET pulses) applied through wordlines (n-type FET Gate). 
+# Note that this voltage is already fully applied through wordlines while bitlines/sourcelines are still in rise phase (it improves convergence and avoids unwanted programming)
+V_GATE_SET: 1.4
+# Gate voltage (during programming RESET pulses) applied through wordlines (n-type FET Gate). 
+# Note that this voltage is already fully applied through wordlines while bitlines/sourcelines are still in rise phase (it improves convergence and avoids unwanted programming)
+V_GATE_RESET: 3.3
+# Maximum number of pulses applied in a bit stream when implementing stochastic parallel weight update scheme
+BITSTREAM_LENGTH: 10
+# Maximum and minimum conductances in uS reached during CMOS-integrated analog ReRAM technology characterization with a given pulse scheme ([1], see main.ipynb for ref.)
+G_MAX: 90
+G_MIN: 25

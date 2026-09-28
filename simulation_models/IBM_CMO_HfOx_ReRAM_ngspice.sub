@@ -1,0 +1,70 @@
+*
+* Copyright IBM Corp. 2025, 2026
+* SPDX-License-Identifier: Apache-2.0
+*
+* Version: IBM_CMO_HfOx_ReRAM for ngspice simulations (v.1.0)
+
+
+***************************************************************************************************************************************************************
+*
+*					ngspice Model of Analog Filamentary ReRAM Device
+*						Conductive-Metal-Oxide/HfOx Technology
+* 								IBM Research Europe
+*
+*	References for compact model description:
+* 	[1] M. Galetta, D.F. Falcone, V. Clerico, W. Choi, S. Menzel, A. La Porta, T. Stecconi, F. Horst, B.J. Offrein, and V. Bragaglia.
+*	    “Study of Resistive Switching Dynamics and Memory States Equilibria in Analog Filamentary Conductive-Metal-Oxide/HfOx ReRAM via Compact Modeling”
+*	    Advanced Electronic Materials 12 (7), e00373. (2025)
+* 	[2] V. Clerico, M. Galetta, M. Senger, W. Choi, D.F. Falcone, A. Todri-Sanial, B.J. Offrein, and V. Bragaglia.
+*	    “Proving Analog In-Memory Training with Fully Parallel Outer Product in ReRAM Crosspoint Array”
+*	    Under review at npj Unconventional Computing (2026)
+*
+*       Please, use [1] and [2] to cite this model in your publication.
+*		Details on the ReRAM device physics can be found in [1], while simulation parameters used in this file can be found in [2].
+*		
+*		For any questions about this file, please contact M. Galetta (eMail: ata@zurich.ibm.com) or V. Bragaglia (eMail: vbr@zurich.ibm.com)
+*
+*	    Aug 28th, 2026 / M. Galetta / IBM Research Europe, Zurich
+*
+***************************************************************************************************************************************************************
+
+
+
+.subckt IBM_CMO_HfOx_ReRAM	TopE BottE
+	+ PARAMS: 
+		+ C_init =  1.64e+25 ; - Initial average oxygen vacancy concentration [m^-3] - HRS=7e24 / SymPointRS=1.64e25 / LRS=3.77e25
+		+ T_init = 293 ; - Initial room temperature [K]
+		+ R_th_0 = 1.4e6 ; - CMO equivalent thermal resistance of switching region [K/W]
+
+	.param R_Series = 0 ; - Series resistance: external wrt the ReRAM [Ohm]
+	.param echarge = 1.60219e-19; - Electron charge [C]
+	.param boltz = 1.38062e-23; - Boltzman constant [J K^-1]
+	.param eV = 1.602176634e-19 ; - Conversion parameter, multiply to convert from [eV] to [J]	
+	.param R_th = R_th_0
+
+	* Model equation definitions:
+	.func dC_Vdt(V_A,C_V,T,F_e) = { V_A>=0 ? (1/(12e-9))*C_V*1e-9*4e12*exp(-(2.288823616285713e-45*C_V+1.499179468667143e-19)/(boltz*T))*2*sinh((2*echarge*F_e*1e-9)/(2*boltz*T))*pow((1-C_V/1e28),10) : (1/(12e-9))*C_V*1e-9*4e12*exp(-1.18*echarge/(boltz*T))*2*sinh((2*echarge*F_e*1e-9)/(2*boltz*T))*pow((1-C_V/1e28),10) }
+
+	.func F_e(V_A,I_e) = { V_A>=0 ? max(0,(V_A -I_e*(219.2217+4+R_Series))/12e-9) : min(0,(V_A -I_e*(219.2217+4+R_Series))/12e-9) }
+
+	.func I_e(C_V,T,F_e)= { (pi*11e-9*11e-9*1.44)*echarge*C_V*(max(2e-9,3.6369e-9-3.0738e-35*C_V))*2e13*exp(-(-3.697330457076916e-47*C_V+1.275579007691538e-20)/(boltz*T))*2*sinh((echarge*F_e*(max(2e-9,3.6369e-9-3.0738e-35*C_V)))/(2*boltz*T)) }
+
+	.func dTdt(V_A,I_e,T) = { V_A*I_e/2e-17 -((T -293)/(R_th*2e-17)) }
+
+	.param C_virtual = 1 ; - Virtual auxiliary capacitance used for functions involving derivatives. Its value is irrelevant
+
+	* Sub-circuits: Electronic conduction (E), Ionic dynamics (ID), Thermal dynamics (TD)
+	* (E)
+	BI_e MidE BottE I = { I_e( V(C_V)*C_virtual, V(T)*C_virtual , F_e(V(TopE)-V(BottE),I(VCurrent_Measurement)) ) }
+	
+	* (ID)
+	BdC_Vdt 0 C_V I = { dC_Vdt( V(TopE)-V(BottE), V(C_V)*C_virtual, V(T)*C_virtual, F_e(V(TopE)-V(BottE),I(BI_e)) ) }
+	C_integration_defect C_V 0 { C_virtual }
+
+	* (TD)
+	BT 0 T I = { dTdt( V(TopE)-V(BottE), I(BI_e), V(T)*C_virtual ) }
+	C_integration_temperature T 0 { C_virtual }
+
+	VCurrent_Measurement TopE MidE dc 0 ; - Null DC voltage source used to measure the current
+
+.ends IBM_CMO_HfOx_ReRAM

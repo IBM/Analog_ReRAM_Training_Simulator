@@ -1,0 +1,1380 @@
+*
+* Copyright IBM Corp. 2025, 2026
+* SPDX-License-Identifier: Apache-2.0
+*
+.title 10x10 Crosspoint Array with 1T1ReRAM unit cell
+.include simulation_models/IBM_CMO_HfOx_ReRAM_ngspice.sub
+.include simulation_models/arbitrary_voltage_source.sub
+.include simulation_output/nodes.txt
+.model __Q1 NMOS level=14
++           vsat=100k
++           vth0=0.5
+.model __Q2 NMOS level=14
++           vsat=100k
++           vth0=0.5
+.model __Q3 NMOS level=14
++           vsat=100k
++           vth0=0.5
+.model __Q4 NMOS level=14
++           vsat=100k
++           vth0=0.5
+.model __Q5 NMOS level=14
++           vsat=100k
++           vth0=0.5
+.model __Q6 NMOS level=14
++           vsat=100k
++           vth0=0.5
+.model __Q7 NMOS level=14
++           vsat=100k
++           vth0=0.5
+.model __Q8 NMOS level=14
++           vsat=100k
++           vth0=0.5
+.model __Q9 NMOS level=14
++           vsat=100k
++           vth0=0.5
+.model __Q10 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q11 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q12 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q13 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q14 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q15 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q16 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q17 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q18 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q19 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q20 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q21 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q22 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q23 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q24 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q25 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q26 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q27 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q28 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q29 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q30 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q31 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q32 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q33 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q34 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q35 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q36 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q37 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q38 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q39 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q40 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q41 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q42 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q43 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q44 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q45 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q46 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q47 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q48 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q49 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q50 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q51 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q52 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q53 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q54 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q55 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q56 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q57 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q58 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q59 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q60 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q61 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q62 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q63 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q64 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q65 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q66 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q67 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q68 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q69 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q70 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q71 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q72 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q73 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q74 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q75 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q76 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q77 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q78 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q79 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q80 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q81 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q82 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q83 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q84 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q85 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q86 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q87 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q88 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q89 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q90 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q91 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q92 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q93 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q94 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q95 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q96 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q97 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q98 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q99 NMOS level=14
++            vsat=100k
++            vth0=0.5
+.model __Q100 NMOS level=14
++             vsat=100k
++             vth0=0.5
+.save all
+.probe alli
+* This relaxes the simulation accuracy so it converges easier, 
+* see [this post](https://forum.kicad.info/t/timestep-too-small-is-killing-me/44015/9)
+.options method=gear chgtol=1e-11 reltol=0.1 rshunt=1G rseries=0.05 cshunt=1p abstol=1n vntol=0.1m trtol=1
+******************************
+
+.control
+* wait until simulation has finished:
+set controlswait
+tran 25n 79.2u 25n
+* set ouput format for cvs:
+set wr_vecnames
+set wr_singlescale
+* option numdgt=7
+* data to csv file:
+* The following lines are used to write all circuit nodes in a .txt file as simulation output. All final nodes include ReRAM internal states, and they are used to initialize the circuit for next operation (initial conditions required for differential equations).
+wrdata simulation_output/data.csv v(/1t1r_10x10/r0/c0/source_node) v(/1t1r_10x10/r0/c1/source_node) v(/1t1r_10x10/r0/c2/source_node) v(/1t1r_10x10/r0/c3/source_node) v(/1t1r_10x10/r0/c4/source_node) v(/1t1r_10x10/r1/c0/source_node) v(/1t1r_10x10/r1/c1/source_node) v(/1t1r_10x10/r1/c2/source_node) v(/1t1r_10x10/r1/c3/source_node) v(/1t1r_10x10/r1/c4/source_node) v(/1t1r_10x10/r2/c0/source_node) v(/1t1r_10x10/r2/c1/source_node) v(/1t1r_10x10/r2/c2/source_node) v(/1t1r_10x10/r2/c3/source_node) v(/1t1r_10x10/r2/c4/source_node) v(/1t1r_10x10/r3/c0/source_node) v(/1t1r_10x10/r3/c1/source_node) v(/1t1r_10x10/r3/c2/source_node) v(/1t1r_10x10/r3/c3/source_node) v(/1t1r_10x10/r3/c4/source_node) v(/1t1r_10x10/r4/c0/source_node) v(/1t1r_10x10/r4/c1/source_node) v(/1t1r_10x10/r4/c2/source_node) v(/1t1r_10x10/r4/c3/source_node) v(/1t1r_10x10/r4/c4/source_node) v(/1t1r_10x10/r0/c0/top_electrode_node) v(/1t1r_10x10/r0/c1/top_electrode_node) v(/1t1r_10x10/r0/c2/top_electrode_node) v(/1t1r_10x10/r0/c3/top_electrode_node) v(/1t1r_10x10/r0/c4/top_electrode_node) v(/1t1r_10x10/r1/c0/top_electrode_node) v(/1t1r_10x10/r1/c1/top_electrode_node) v(/1t1r_10x10/r1/c2/top_electrode_node) v(/1t1r_10x10/r1/c3/top_electrode_node) v(/1t1r_10x10/r1/c4/top_electrode_node) v(/1t1r_10x10/r2/c0/top_electrode_node) v(/1t1r_10x10/r2/c1/top_electrode_node) v(/1t1r_10x10/r2/c2/top_electrode_node) v(/1t1r_10x10/r2/c3/top_electrode_node) v(/1t1r_10x10/r2/c4/top_electrode_node) v(/1t1r_10x10/r3/c0/top_electrode_node) v(/1t1r_10x10/r3/c1/top_electrode_node) v(/1t1r_10x10/r3/c2/top_electrode_node) v(/1t1r_10x10/r3/c3/top_electrode_node) v(/1t1r_10x10/r3/c4/top_electrode_node) v(/1t1r_10x10/r4/c0/top_electrode_node) v(/1t1r_10x10/r4/c1/top_electrode_node) v(/1t1r_10x10/r4/c2/top_electrode_node) v(/1t1r_10x10/r4/c3/top_electrode_node) v(/1t1r_10x10/r4/c4/top_electrode_node) v(/1t1r_10x10/r0/c0/ammeter_drain/minus) v(/1t1r_10x10/r0/c1/ammeter_drain/minus) v(/1t1r_10x10/r0/c2/ammeter_drain/minus) v(/1t1r_10x10/r0/c3/ammeter_drain/minus) v(/1t1r_10x10/r0/c4/ammeter_drain/minus) v(/1t1r_10x10/r1/c0/ammeter_drain/minus) v(/1t1r_10x10/r1/c1/ammeter_drain/minus) v(/1t1r_10x10/r1/c2/ammeter_drain/minus) v(/1t1r_10x10/r1/c3/ammeter_drain/minus) v(/1t1r_10x10/r1/c4/ammeter_drain/minus) v(/1t1r_10x10/r2/c0/ammeter_drain/minus) v(/1t1r_10x10/r2/c1/ammeter_drain/minus) v(/1t1r_10x10/r2/c2/ammeter_drain/minus) v(/1t1r_10x10/r2/c3/ammeter_drain/minus) v(/1t1r_10x10/r2/c4/ammeter_drain/minus) v(/1t1r_10x10/r3/c0/ammeter_drain/minus) v(/1t1r_10x10/r3/c1/ammeter_drain/minus) v(/1t1r_10x10/r3/c2/ammeter_drain/minus) v(/1t1r_10x10/r3/c3/ammeter_drain/minus) v(/1t1r_10x10/r3/c4/ammeter_drain/minus) v(/1t1r_10x10/r4/c0/ammeter_drain/minus) v(/1t1r_10x10/r4/c1/ammeter_drain/minus) v(/1t1r_10x10/r4/c2/ammeter_drain/minus) v(/1t1r_10x10/r4/c3/ammeter_drain/minus) v(/1t1r_10x10/r4/c4/ammeter_drain/minus) v(/1t1r_10x10/r0/c0/ammeter_drain/plus) v(/1t1r_10x10/r0/c1/ammeter_drain/plus) v(/1t1r_10x10/r0/c2/ammeter_drain/plus) v(/1t1r_10x10/r0/c3/ammeter_drain/plus) v(/1t1r_10x10/r0/c4/ammeter_drain/plus) v(/1t1r_10x10/r1/c0/ammeter_drain/plus) v(/1t1r_10x10/r1/c1/ammeter_drain/plus) v(/1t1r_10x10/r1/c2/ammeter_drain/plus) v(/1t1r_10x10/r1/c3/ammeter_drain/plus) v(/1t1r_10x10/r1/c4/ammeter_drain/plus) v(/1t1r_10x10/r2/c0/ammeter_drain/plus) v(/1t1r_10x10/r2/c1/ammeter_drain/plus) v(/1t1r_10x10/r2/c2/ammeter_drain/plus) v(/1t1r_10x10/r2/c3/ammeter_drain/plus) v(/1t1r_10x10/r2/c4/ammeter_drain/plus) v(/1t1r_10x10/r3/c0/ammeter_drain/plus) v(/1t1r_10x10/r3/c1/ammeter_drain/plus) v(/1t1r_10x10/r3/c2/ammeter_drain/plus) v(/1t1r_10x10/r3/c3/ammeter_drain/plus) v(/1t1r_10x10/r3/c4/ammeter_drain/plus) v(/1t1r_10x10/r4/c0/ammeter_drain/plus) v(/1t1r_10x10/r4/c1/ammeter_drain/plus) v(/1t1r_10x10/r4/c2/ammeter_drain/plus) v(/1t1r_10x10/r4/c3/ammeter_drain/plus) v(/1t1r_10x10/r4/c4/ammeter_drain/plus) v(/voltage_sources/row0/ammeter/plus) v(/voltage_sources/row0/ammeter/minus) v(/voltage_sources/row1/ammeter/plus) v(/voltage_sources/row1/ammeter/minus) v(/voltage_sources/row2/ammeter/plus) v(/voltage_sources/row2/ammeter/minus) v(/voltage_sources/row3/ammeter/plus) v(/voltage_sources/row3/ammeter/minus) v(/voltage_sources/row4/ammeter/plus) v(/voltage_sources/row4/ammeter/minus) v(/voltage_sources/col0/ammeter/plus) v(/voltage_sources/col0/ammeter/minus) v(/voltage_sources/col1/ammeter/plus) v(/voltage_sources/col1/ammeter/minus) v(/voltage_sources/col2/ammeter/plus) v(/voltage_sources/col2/ammeter/minus) v(/voltage_sources/col3/ammeter/plus) v(/voltage_sources/col3/ammeter/minus) v(/voltage_sources/col4/ammeter/plus) v(/voltage_sources/col4/ammeter/minus) v(/1t1r_10x10/r0/c5/source_node) v(/1t1r_10x10/r0/c6/source_node) v(/1t1r_10x10/r0/c7/source_node) v(/1t1r_10x10/r0/c8/source_node) v(/1t1r_10x10/r0/c9/source_node) v(/1t1r_10x10/r1/c5/source_node) v(/1t1r_10x10/r1/c6/source_node) v(/1t1r_10x10/r1/c7/source_node) v(/1t1r_10x10/r1/c8/source_node) v(/1t1r_10x10/r1/c9/source_node) v(/1t1r_10x10/r2/c5/source_node) v(/1t1r_10x10/r2/c6/source_node) v(/1t1r_10x10/r2/c7/source_node) v(/1t1r_10x10/r2/c8/source_node) v(/1t1r_10x10/r2/c9/source_node) v(/1t1r_10x10/r3/c5/source_node) v(/1t1r_10x10/r3/c6/source_node) v(/1t1r_10x10/r3/c7/source_node) v(/1t1r_10x10/r3/c8/source_node) v(/1t1r_10x10/r3/c9/source_node) v(/1t1r_10x10/r0/c6/source_node) v(/1t1r_10x10/r0/c7/source_node) v(/1t1r_10x10/r0/c8/source_node) v(/1t1r_10x10/r0/c9/source_node) v(/1t1r_10x10/r4/c5/source_node) v(/1t1r_10x10/r4/c6/source_node) v(/1t1r_10x10/r4/c7/source_node) v(/1t1r_10x10/r4/c8/source_node) v(/1t1r_10x10/r4/c9/source_node) v(/1t1r_10x10/r0/c5/top_electrode_node) v(/1t1r_10x10/r0/c6/top_electrode_node) v(/1t1r_10x10/r0/c7/top_electrode_node) v(/1t1r_10x10/r0/c8/top_electrode_node) v(/1t1r_10x10/r0/c9/top_electrode_node) v(/1t1r_10x10/r1/c5/top_electrode_node) v(/1t1r_10x10/r1/c6/top_electrode_node) v(/1t1r_10x10/r1/c7/top_electrode_node) v(/1t1r_10x10/r1/c8/top_electrode_node) v(/1t1r_10x10/r1/c9/top_electrode_node) v(/1t1r_10x10/r2/c5/top_electrode_node) v(/1t1r_10x10/r2/c6/top_electrode_node) v(/1t1r_10x10/r2/c7/top_electrode_node) v(/1t1r_10x10/r2/c8/top_electrode_node) v(/1t1r_10x10/r2/c9/top_electrode_node) v(/1t1r_10x10/r3/c5/top_electrode_node) v(/1t1r_10x10/r3/c6/top_electrode_node) v(/1t1r_10x10/r3/c7/top_electrode_node) v(/1t1r_10x10/r3/c8/top_electrode_node) v(/1t1r_10x10/r3/c9/top_electrode_node) v(/1t1r_10x10/r4/c5/top_electrode_node) v(/1t1r_10x10/r4/c6/top_electrode_node) v(/1t1r_10x10/r4/c7/top_electrode_node) v(/1t1r_10x10/r4/c8/top_electrode_node) v(/1t1r_10x10/r4/c9/top_electrode_node) v(/1t1r_10x10/r5/c0/source_node) v(/1t1r_10x10/r5/c1/source_node) v(/1t1r_10x10/r5/c2/source_node) v(/1t1r_10x10/r5/c3/source_node) v(/1t1r_10x10/r5/c4/source_node) v(/1t1r_10x10/r5/c5/source_node) v(/1t1r_10x10/r5/c6/source_node) v(/1t1r_10x10/r5/c7/source_node) v(/1t1r_10x10/r5/c8/source_node) v(/1t1r_10x10/r5/c9/source_node) v(/1t1r_10x10/r6/c0/source_node) v(/1t1r_10x10/r6/c1/source_node) v(/1t1r_10x10/r6/c2/source_node) v(/1t1r_10x10/r6/c3/source_node) v(/1t1r_10x10/r6/c4/source_node) v(/1t1r_10x10/r6/c5/source_node) v(/1t1r_10x10/r6/c6/source_node) v(/1t1r_10x10/r6/c7/source_node) v(/1t1r_10x10/r6/c8/source_node) v(/1t1r_10x10/r6/c9/source_node) v(/1t1r_10x10/r7/c0/source_node) v(/1t1r_10x10/r7/c1/source_node) v(/1t1r_10x10/r7/c2/source_node) v(/1t1r_10x10/r7/c3/source_node) v(/1t1r_10x10/r7/c4/source_node) v(/1t1r_10x10/r7/c5/source_node) v(/1t1r_10x10/r7/c6/source_node) v(/1t1r_10x10/r7/c7/source_node) v(/1t1r_10x10/r7/c8/source_node) v(/1t1r_10x10/r7/c9/source_node) v(/1t1r_10x10/r8/c0/source_node) v(/1t1r_10x10/r8/c1/source_node) v(/1t1r_10x10/r8/c2/source_node) v(/1t1r_10x10/r8/c3/source_node) v(/1t1r_10x10/r8/c4/source_node) v(/1t1r_10x10/r8/c5/source_node) v(/1t1r_10x10/r8/c6/source_node) v(/1t1r_10x10/r8/c7/source_node) v(/1t1r_10x10/r8/c8/source_node) v(/1t1r_10x10/r8/c9/source_node) v(/1t1r_10x10/r9/c0/source_node) v(/1t1r_10x10/r9/c1/source_node) v(/1t1r_10x10/r9/c2/source_node) v(/1t1r_10x10/r9/c3/source_node) v(/1t1r_10x10/r9/c4/source_node) v(/1t1r_10x10/r9/c5/source_node) v(/1t1r_10x10/r9/c6/source_node) v(/1t1r_10x10/r9/c7/source_node) v(/1t1r_10x10/r9/c8/source_node) v(/1t1r_10x10/r9/c9/source_node) v(/1t1r_10x10/r0/c5/ammeter_drain/minus) v(/1t1r_10x10/r0/c6/ammeter_drain/minus) v(/1t1r_10x10/r0/c7/ammeter_drain/minus) v(/1t1r_10x10/r0/c8/ammeter_drain/minus) v(/1t1r_10x10/r0/c9/ammeter_drain/minus) v(/1t1r_10x10/r1/c5/ammeter_drain/minus) v(/1t1r_10x10/r1/c6/ammeter_drain/minus) v(/1t1r_10x10/r1/c7/ammeter_drain/minus) v(/1t1r_10x10/r1/c8/ammeter_drain/minus) v(/1t1r_10x10/r1/c9/ammeter_drain/minus) v(/1t1r_10x10/r2/c5/ammeter_drain/minus) v(/1t1r_10x10/r2/c6/ammeter_drain/minus) v(/1t1r_10x10/r2/c7/ammeter_drain/minus) v(/1t1r_10x10/r2/c8/ammeter_drain/minus) v(/1t1r_10x10/r2/c9/ammeter_drain/minus) v(/1t1r_10x10/r3/c5/ammeter_drain/minus) v(/1t1r_10x10/r3/c6/ammeter_drain/minus) v(/1t1r_10x10/r3/c7/ammeter_drain/minus) v(/1t1r_10x10/r3/c8/ammeter_drain/minus) v(/1t1r_10x10/r3/c9/ammeter_drain/minus) v(/1t1r_10x10/r4/c5/ammeter_drain/minus) v(/1t1r_10x10/r4/c6/ammeter_drain/minus) v(/1t1r_10x10/r4/c7/ammeter_drain/minus) v(/1t1r_10x10/r4/c8/ammeter_drain/minus) v(/1t1r_10x10/r4/c9/ammeter_drain/minus) v(/1t1r_10x10/r5/c0/ammeter_drain/minus) v(/1t1r_10x10/r5/c1/ammeter_drain/minus) v(/1t1r_10x10/r5/c2/ammeter_drain/minus) v(/1t1r_10x10/r5/c3/ammeter_drain/minus) v(/1t1r_10x10/r5/c4/ammeter_drain/minus) v(/1t1r_10x10/r5/c5/ammeter_drain/minus) v(/1t1r_10x10/r5/c6/ammeter_drain/minus) v(/1t1r_10x10/r5/c7/ammeter_drain/minus) v(/1t1r_10x10/r5/c8/ammeter_drain/minus) v(/1t1r_10x10/r5/c9/ammeter_drain/minus) v(/1t1r_10x10/r6/c0/ammeter_drain/minus) v(/1t1r_10x10/r6/c1/ammeter_drain/minus) v(/1t1r_10x10/r6/c2/ammeter_drain/minus) v(/1t1r_10x10/r6/c3/ammeter_drain/minus) v(/1t1r_10x10/r6/c4/ammeter_drain/minus) v(/1t1r_10x10/r6/c5/ammeter_drain/minus) v(/1t1r_10x10/r6/c6/ammeter_drain/minus) v(/1t1r_10x10/r6/c7/ammeter_drain/minus) v(/1t1r_10x10/r6/c8/ammeter_drain/minus) v(/1t1r_10x10/r6/c9/ammeter_drain/minus) v(/1t1r_10x10/r7/c0/ammeter_drain/minus) v(/1t1r_10x10/r7/c1/ammeter_drain/minus) v(/1t1r_10x10/r7/c2/ammeter_drain/minus) v(/1t1r_10x10/r7/c3/ammeter_drain/minus) v(/1t1r_10x10/r7/c4/ammeter_drain/minus) v(/1t1r_10x10/r7/c5/ammeter_drain/minus) v(/1t1r_10x10/r7/c6/ammeter_drain/minus) v(/1t1r_10x10/r7/c7/ammeter_drain/minus) v(/1t1r_10x10/r7/c8/ammeter_drain/minus) v(/1t1r_10x10/r7/c9/ammeter_drain/minus) v(/1t1r_10x10/r8/c0/ammeter_drain/minus) v(/1t1r_10x10/r8/c1/ammeter_drain/minus) v(/1t1r_10x10/r8/c2/ammeter_drain/minus) v(/1t1r_10x10/r8/c3/ammeter_drain/minus) v(/1t1r_10x10/r8/c4/ammeter_drain/minus) v(/1t1r_10x10/r8/c5/ammeter_drain/minus) v(/1t1r_10x10/r8/c6/ammeter_drain/minus) v(/1t1r_10x10/r8/c7/ammeter_drain/minus) v(/1t1r_10x10/r8/c8/ammeter_drain/minus) v(/1t1r_10x10/r8/c9/ammeter_drain/minus) v(/1t1r_10x10/r9/c0/ammeter_drain/minus) v(/1t1r_10x10/r9/c1/ammeter_drain/minus) v(/1t1r_10x10/r9/c2/ammeter_drain/minus) v(/1t1r_10x10/r9/c3/ammeter_drain/minus) v(/1t1r_10x10/r9/c4/ammeter_drain/minus) v(/1t1r_10x10/r9/c5/ammeter_drain/minus) v(/1t1r_10x10/r9/c6/ammeter_drain/minus) v(/1t1r_10x10/r9/c7/ammeter_drain/minus) v(/1t1r_10x10/r9/c8/ammeter_drain/minus) v(/1t1r_10x10/r9/c9/ammeter_drain/minus) v(/1t1r_10x10/r0/c5/ammeter_drain/plus) v(/1t1r_10x10/r0/c6/ammeter_drain/plus) v(/1t1r_10x10/r0/c7/ammeter_drain/plus) v(/1t1r_10x10/r0/c8/ammeter_drain/plus) v(/1t1r_10x10/r0/c9/ammeter_drain/plus) v(/1t1r_10x10/r1/c5/ammeter_drain/plus) v(/1t1r_10x10/r1/c6/ammeter_drain/plus) v(/1t1r_10x10/r1/c7/ammeter_drain/plus) v(/1t1r_10x10/r1/c8/ammeter_drain/plus) v(/1t1r_10x10/r1/c9/ammeter_drain/plus) v(/1t1r_10x10/r2/c5/ammeter_drain/plus) v(/1t1r_10x10/r2/c6/ammeter_drain/plus) v(/1t1r_10x10/r2/c7/ammeter_drain/plus) v(/1t1r_10x10/r2/c8/ammeter_drain/plus) v(/1t1r_10x10/r2/c9/ammeter_drain/plus) v(/1t1r_10x10/r3/c5/ammeter_drain/plus) v(/1t1r_10x10/r3/c6/ammeter_drain/plus) v(/1t1r_10x10/r3/c7/ammeter_drain/plus) v(/1t1r_10x10/r3/c8/ammeter_drain/plus) v(/1t1r_10x10/r3/c9/ammeter_drain/plus) v(/1t1r_10x10/r4/c5/ammeter_drain/plus) v(/1t1r_10x10/r4/c6/ammeter_drain/plus) v(/1t1r_10x10/r4/c7/ammeter_drain/plus) v(/1t1r_10x10/r4/c8/ammeter_drain/plus) v(/1t1r_10x10/r4/c9/ammeter_drain/plus) v(/1t1r_10x10/r5/c0/ammeter_drain/plus) v(/1t1r_10x10/r5/c1/ammeter_drain/plus) v(/1t1r_10x10/r5/c2/ammeter_drain/plus) v(/1t1r_10x10/r5/c3/ammeter_drain/plus) v(/1t1r_10x10/r5/c4/ammeter_drain/plus) v(/1t1r_10x10/r5/c5/ammeter_drain/plus) v(/1t1r_10x10/r5/c6/ammeter_drain/plus) v(/1t1r_10x10/r5/c7/ammeter_drain/plus) v(/1t1r_10x10/r5/c8/ammeter_drain/plus) v(/1t1r_10x10/r5/c9/ammeter_drain/plus) v(/1t1r_10x10/r6/c0/ammeter_drain/plus) v(/1t1r_10x10/r6/c1/ammeter_drain/plus) v(/1t1r_10x10/r6/c2/ammeter_drain/plus) v(/1t1r_10x10/r6/c3/ammeter_drain/plus) v(/1t1r_10x10/r6/c4/ammeter_drain/plus) v(/1t1r_10x10/r6/c5/ammeter_drain/plus) v(/1t1r_10x10/r6/c6/ammeter_drain/plus) v(/1t1r_10x10/r6/c7/ammeter_drain/plus) v(/1t1r_10x10/r6/c8/ammeter_drain/plus) v(/1t1r_10x10/r6/c9/ammeter_drain/plus) v(/1t1r_10x10/r7/c0/ammeter_drain/plus) v(/1t1r_10x10/r7/c1/ammeter_drain/plus) v(/1t1r_10x10/r7/c2/ammeter_drain/plus) v(/1t1r_10x10/r7/c3/ammeter_drain/plus) v(/1t1r_10x10/r7/c4/ammeter_drain/plus) v(/1t1r_10x10/r7/c5/ammeter_drain/plus) v(/1t1r_10x10/r7/c6/ammeter_drain/plus) v(/1t1r_10x10/r7/c7/ammeter_drain/plus) v(/1t1r_10x10/r7/c8/ammeter_drain/plus) v(/1t1r_10x10/r7/c9/ammeter_drain/plus) v(/1t1r_10x10/r8/c0/ammeter_drain/plus) v(/1t1r_10x10/r8/c1/ammeter_drain/plus) v(/1t1r_10x10/r8/c2/ammeter_drain/plus) v(/1t1r_10x10/r8/c3/ammeter_drain/plus) v(/1t1r_10x10/r8/c4/ammeter_drain/plus) v(/1t1r_10x10/r8/c5/ammeter_drain/plus) v(/1t1r_10x10/r8/c6/ammeter_drain/plus) v(/1t1r_10x10/r8/c7/ammeter_drain/plus) v(/1t1r_10x10/r8/c8/ammeter_drain/plus) v(/1t1r_10x10/r8/c9/ammeter_drain/plus) v(/1t1r_10x10/r9/c0/ammeter_drain/plus) v(/1t1r_10x10/r9/c1/ammeter_drain/plus) v(/1t1r_10x10/r9/c2/ammeter_drain/plus) v(/1t1r_10x10/r9/c3/ammeter_drain/plus) v(/1t1r_10x10/r9/c4/ammeter_drain/plus) v(/1t1r_10x10/r9/c5/ammeter_drain/plus) v(/1t1r_10x10/r9/c6/ammeter_drain/plus) v(/1t1r_10x10/r9/c7/ammeter_drain/plus) v(/1t1r_10x10/r9/c8/ammeter_drain/plus) v(/1t1r_10x10/r9/c9/ammeter_drain/plus) v(/voltage_sources/col5/ammeter/minus) v(/voltage_sources/col6/ammeter/minus) v(/voltage_sources/col7/ammeter/minus) v(/voltage_sources/col8/ammeter/minus) v(/voltage_sources/col9/ammeter/minus) v(/voltage_sources/row5/ammeter/minus) v(/voltage_sources/row6/ammeter/minus) v(/voltage_sources/row7/ammeter/minus) v(/voltage_sources/row8/ammeter/minus) v(/voltage_sources/row9/ammeter/minus) v(/voltage_sources/col5/ammeter/plus) v(/voltage_sources/col6/ammeter/plus) v(/voltage_sources/col7/ammeter/plus) v(/voltage_sources/col8/ammeter/plus) v(/voltage_sources/col9/ammeter/plus) v(/voltage_sources/row5/ammeter/plus) v(/voltage_sources/row6/ammeter/plus) v(/voltage_sources/row7/ammeter/plus) v(/voltage_sources/row8/ammeter/plus) v(/voltage_sources/row9/ammeter/plus) v(/1t1r_10x10/r5/c0/top_electrode_node) v(/1t1r_10x10/r5/c1/top_electrode_node) v(/1t1r_10x10/r5/c2/top_electrode_node) v(/1t1r_10x10/r5/c3/top_electrode_node) v(/1t1r_10x10/r5/c4/top_electrode_node) v(/1t1r_10x10/r5/c5/top_electrode_node) v(/1t1r_10x10/r5/c6/top_electrode_node) v(/1t1r_10x10/r5/c7/top_electrode_node) v(/1t1r_10x10/r5/c8/top_electrode_node) v(/1t1r_10x10/r5/c9/top_electrode_node) v(/1t1r_10x10/r6/c0/top_electrode_node) v(/1t1r_10x10/r6/c1/top_electrode_node) v(/1t1r_10x10/r6/c2/top_electrode_node) v(/1t1r_10x10/r6/c3/top_electrode_node) v(/1t1r_10x10/r6/c4/top_electrode_node) v(/1t1r_10x10/r6/c5/top_electrode_node) v(/1t1r_10x10/r6/c6/top_electrode_node) v(/1t1r_10x10/r6/c7/top_electrode_node) v(/1t1r_10x10/r6/c8/top_electrode_node) v(/1t1r_10x10/r6/c9/top_electrode_node) v(/1t1r_10x10/r7/c0/top_electrode_node) v(/1t1r_10x10/r7/c1/top_electrode_node) v(/1t1r_10x10/r7/c2/top_electrode_node) v(/1t1r_10x10/r7/c3/top_electrode_node) v(/1t1r_10x10/r7/c4/top_electrode_node) v(/1t1r_10x10/r7/c5/top_electrode_node) v(/1t1r_10x10/r7/c6/top_electrode_node) v(/1t1r_10x10/r7/c7/top_electrode_node) v(/1t1r_10x10/r7/c8/top_electrode_node) v(/1t1r_10x10/r7/c9/top_electrode_node) v(/1t1r_10x10/r8/c0/top_electrode_node) v(/1t1r_10x10/r8/c1/top_electrode_node) v(/1t1r_10x10/r8/c2/top_electrode_node) v(/1t1r_10x10/r8/c3/top_electrode_node) v(/1t1r_10x10/r8/c4/top_electrode_node) v(/1t1r_10x10/r8/c5/top_electrode_node) v(/1t1r_10x10/r8/c6/top_electrode_node) v(/1t1r_10x10/r8/c7/top_electrode_node) v(/1t1r_10x10/r8/c8/top_electrode_node) v(/1t1r_10x10/r8/c9/top_electrode_node) v(/1t1r_10x10/r9/c0/top_electrode_node) v(/1t1r_10x10/r9/c1/top_electrode_node) v(/1t1r_10x10/r9/c2/top_electrode_node) v(/1t1r_10x10/r9/c3/top_electrode_node) v(/1t1r_10x10/r9/c4/top_electrode_node) v(/1t1r_10x10/r9/c5/top_electrode_node) v(/1t1r_10x10/r9/c6/top_electrode_node) v(/1t1r_10x10/r9/c7/top_electrode_node) v(/1t1r_10x10/r9/c8/top_electrode_node) v(/1t1r_10x10/r9/c9/top_electrode_node)
+wrnodev simulation_output/nodes.txt
+.endc
+******************************
+.param row0_wf_file="waveforms/row0.txt"
+.param row1_wf_file="waveforms/row1.txt"
+.param row2_wf_file="waveforms/row2.txt"
+.param row3_wf_file="waveforms/row3.txt"
+.param row4_wf_file="waveforms/row4.txt"
+.param col0_wf_file="waveforms/col0.txt"
+.param col1_wf_file="waveforms/col1.txt"
+.param col2_wf_file="waveforms/col2.txt"
+.param col3_wf_file="waveforms/col3.txt"
+.param col4_wf_file="waveforms/col4.txt"
+.param gates0_wf_file="waveforms/gates0.txt"
+.param gates1_wf_file="waveforms/gates1.txt"
+.param gates2_wf_file="waveforms/gates2.txt"
+.param gates3_wf_file="waveforms/gates3.txt"
+.param gates4_wf_file="waveforms/gates4.txt"
+.param col5_wf_file="waveforms/col5.txt"
+.param col6_wf_file="waveforms/col6.txt"
+.param col7_wf_file="waveforms/col7.txt"
+.param col8_wf_file="waveforms/col8.txt"
+.param col9_wf_file="waveforms/col9.txt"
+.param row5_wf_file="waveforms/row5.txt"
+.param row6_wf_file="waveforms/row6.txt"
+.param row7_wf_file="waveforms/row7.txt"
+.param row8_wf_file="waveforms/row8.txt"
+.param row9_wf_file="waveforms/row9.txt"
+.param gates5_wf_file="waveforms/gates5.txt"
+.param gates6_wf_file="waveforms/gates6.txt"
+.param gates7_wf_file="waveforms/gates7.txt"
+.param gates8_wf_file="waveforms/gates8.txt"
+.param gates9_wf_file="waveforms/gates9.txt"
+MQ1 /1T1R_10x10/R0/C3/drain_node /1T1R_10x10/R0/C3/gate_node /1T1R_10x10/R0/C3/source_node GND __Q1 l=250n w=2u
+V1 /1T1R_10x10/R0/C3/gate_node /1T1R_10x10/gates0 DC 0 
+XMR1 /1T1R_10x10/R0/C3/top_electrode_node /1T1R_10x10/R0/C3/drain_node IBM_CMO_HfOx_ReRAM
+V2 /1T1R_10x10/row0 /1T1R_10x10/R0/C3/ammeter_drain/plus DC 0 
+V3 /1T1R_10x10/R0/C3/ammeter_drain/minus /1T1R_10x10/R0/C3/top_electrode_node DC 0 
+R1 /1T1R_10x10/R0/C3/ammeter_drain/plus /1T1R_10x10/R0/C3/ammeter_drain/minus .1
+V4 /1T1R_10x10/R0/C3/source_node /1T1R_10x10/R0/C3/ammeter_source/plus DC 0 
+V5 /1T1R_10x10/R0/C3/ammeter_source/minus /1T1R_10x10/col3 DC 0 
+R2 /1T1R_10x10/R0/C3/ammeter_source/plus /1T1R_10x10/R0/C3/ammeter_source/minus .1
+MQ2 /1T1R_10x10/R0/C0/drain_node /1T1R_10x10/R0/C0/gate_node /1T1R_10x10/R0/C0/source_node GND __Q2 l=250n w=2u
+V6 /1T1R_10x10/R0/C0/gate_node /1T1R_10x10/gates0 DC 0 
+XMR2 /1T1R_10x10/R0/C0/top_electrode_node /1T1R_10x10/R0/C0/drain_node IBM_CMO_HfOx_ReRAM
+V7 /1T1R_10x10/row0 /1T1R_10x10/R0/C0/ammeter_drain/plus DC 0 
+V8 /1T1R_10x10/R0/C0/ammeter_drain/minus /1T1R_10x10/R0/C0/top_electrode_node DC 0 
+R3 /1T1R_10x10/R0/C0/ammeter_drain/plus /1T1R_10x10/R0/C0/ammeter_drain/minus .1
+V9 /1T1R_10x10/R0/C0/source_node /1T1R_10x10/R0/C0/ammeter_source/plus DC 0 
+V10 /1T1R_10x10/R0/C0/ammeter_source/minus /1T1R_10x10/col0 DC 0 
+R4 /1T1R_10x10/R0/C0/ammeter_source/plus /1T1R_10x10/R0/C0/ammeter_source/minus .1
+MQ3 /1T1R_10x10/R0/C1/drain_node /1T1R_10x10/R0/C1/gate_node /1T1R_10x10/R0/C1/source_node GND __Q3 l=250n w=2u
+V11 /1T1R_10x10/R0/C1/gate_node /1T1R_10x10/gates0 DC 0 
+XMR3 /1T1R_10x10/R0/C1/top_electrode_node /1T1R_10x10/R0/C1/drain_node IBM_CMO_HfOx_ReRAM
+V12 /1T1R_10x10/row0 /1T1R_10x10/R0/C1/ammeter_drain/plus DC 0 
+V13 /1T1R_10x10/R0/C1/ammeter_drain/minus /1T1R_10x10/R0/C1/top_electrode_node DC 0 
+R5 /1T1R_10x10/R0/C1/ammeter_drain/plus /1T1R_10x10/R0/C1/ammeter_drain/minus .1
+V14 /1T1R_10x10/R0/C1/source_node /1T1R_10x10/R0/C1/ammeter_source/plus DC 0 
+V15 /1T1R_10x10/R0/C1/ammeter_source/minus /1T1R_10x10/col1 DC 0 
+R6 /1T1R_10x10/R0/C1/ammeter_source/plus /1T1R_10x10/R0/C1/ammeter_source/minus .1
+MQ4 /1T1R_10x10/R0/C2/drain_node /1T1R_10x10/R0/C2/gate_node /1T1R_10x10/R0/C2/source_node GND __Q4 l=250n w=2u
+V16 /1T1R_10x10/R0/C2/gate_node /1T1R_10x10/gates0 DC 0 
+XMR4 /1T1R_10x10/R0/C2/top_electrode_node /1T1R_10x10/R0/C2/drain_node IBM_CMO_HfOx_ReRAM
+V17 /1T1R_10x10/row0 /1T1R_10x10/R0/C2/ammeter_drain/plus DC 0 
+V18 /1T1R_10x10/R0/C2/ammeter_drain/minus /1T1R_10x10/R0/C2/top_electrode_node DC 0 
+R7 /1T1R_10x10/R0/C2/ammeter_drain/plus /1T1R_10x10/R0/C2/ammeter_drain/minus .1
+V19 /1T1R_10x10/R0/C2/source_node /1T1R_10x10/R0/C2/ammeter_source/plus DC 0 
+V20 /1T1R_10x10/R0/C2/ammeter_source/minus /1T1R_10x10/col2 DC 0 
+R8 /1T1R_10x10/R0/C2/ammeter_source/plus /1T1R_10x10/R0/C2/ammeter_source/minus .1
+MQ5 /1T1R_10x10/R0/C7/drain_node /1T1R_10x10/R0/C7/gate_node /1T1R_10x10/R0/C7/source_node GND __Q5 l=250n w=2u
+V21 /1T1R_10x10/R0/C7/gate_node /1T1R_10x10/gates0 DC 0 
+XMR5 /1T1R_10x10/R0/C7/top_electrode_node /1T1R_10x10/R0/C7/drain_node IBM_CMO_HfOx_ReRAM
+V22 /1T1R_10x10/row0 /1T1R_10x10/R0/C7/ammeter_drain/plus DC 0 
+V23 /1T1R_10x10/R0/C7/ammeter_drain/minus /1T1R_10x10/R0/C7/top_electrode_node DC 0 
+R9 /1T1R_10x10/R0/C7/ammeter_drain/plus /1T1R_10x10/R0/C7/ammeter_drain/minus .1
+V24 /1T1R_10x10/R0/C7/source_node /1T1R_10x10/R0/C7/ammeter_source/plus DC 0 
+V25 /1T1R_10x10/R0/C7/ammeter_source/minus /1T1R_10x10/col7 DC 0 
+R10 /1T1R_10x10/R0/C7/ammeter_source/plus /1T1R_10x10/R0/C7/ammeter_source/minus .1
+MQ6 /1T1R_10x10/R0/C8/drain_node /1T1R_10x10/R0/C8/gate_node /1T1R_10x10/R0/C8/source_node GND __Q6 l=250n w=2u
+V26 /1T1R_10x10/R0/C8/gate_node /1T1R_10x10/gates0 DC 0 
+XMR6 /1T1R_10x10/R0/C8/top_electrode_node /1T1R_10x10/R0/C8/drain_node IBM_CMO_HfOx_ReRAM
+V27 /1T1R_10x10/row0 /1T1R_10x10/R0/C8/ammeter_drain/plus DC 0 
+V28 /1T1R_10x10/R0/C8/ammeter_drain/minus /1T1R_10x10/R0/C8/top_electrode_node DC 0 
+R11 /1T1R_10x10/R0/C8/ammeter_drain/plus /1T1R_10x10/R0/C8/ammeter_drain/minus .1
+V29 /1T1R_10x10/R0/C8/source_node /1T1R_10x10/R0/C8/ammeter_source/plus DC 0 
+V30 /1T1R_10x10/R0/C8/ammeter_source/minus /1T1R_10x10/col8 DC 0 
+R12 /1T1R_10x10/R0/C8/ammeter_source/plus /1T1R_10x10/R0/C8/ammeter_source/minus .1
+MQ7 /1T1R_10x10/R0/C5/drain_node /1T1R_10x10/R0/C5/gate_node /1T1R_10x10/R0/C5/source_node GND __Q7 l=250n w=2u
+V31 /1T1R_10x10/R0/C5/gate_node /1T1R_10x10/gates0 DC 0 
+XMR7 /1T1R_10x10/R0/C5/top_electrode_node /1T1R_10x10/R0/C5/drain_node IBM_CMO_HfOx_ReRAM
+V32 /1T1R_10x10/row0 /1T1R_10x10/R0/C5/ammeter_drain/plus DC 0 
+V33 /1T1R_10x10/R0/C5/ammeter_drain/minus /1T1R_10x10/R0/C5/top_electrode_node DC 0 
+R13 /1T1R_10x10/R0/C5/ammeter_drain/plus /1T1R_10x10/R0/C5/ammeter_drain/minus .1
+V34 /1T1R_10x10/R0/C5/source_node /1T1R_10x10/R0/C5/ammeter_source/plus DC 0 
+V35 /1T1R_10x10/R0/C5/ammeter_source/minus /1T1R_10x10/col5 DC 0 
+R14 /1T1R_10x10/R0/C5/ammeter_source/plus /1T1R_10x10/R0/C5/ammeter_source/minus .1
+MQ8 /1T1R_10x10/R0/C6/drain_node /1T1R_10x10/R0/C6/gate_node /1T1R_10x10/R0/C6/source_node GND __Q8 l=250n w=2u
+V36 /1T1R_10x10/R0/C6/gate_node /1T1R_10x10/gates0 DC 0 
+XMR8 /1T1R_10x10/R0/C6/top_electrode_node /1T1R_10x10/R0/C6/drain_node IBM_CMO_HfOx_ReRAM
+V37 /1T1R_10x10/row0 /1T1R_10x10/R0/C6/ammeter_drain/plus DC 0 
+V38 /1T1R_10x10/R0/C6/ammeter_drain/minus /1T1R_10x10/R0/C6/top_electrode_node DC 0 
+R15 /1T1R_10x10/R0/C6/ammeter_drain/plus /1T1R_10x10/R0/C6/ammeter_drain/minus .1
+V39 /1T1R_10x10/R0/C6/source_node /1T1R_10x10/R0/C6/ammeter_source/plus DC 0 
+V40 /1T1R_10x10/R0/C6/ammeter_source/minus /1T1R_10x10/col6 DC 0 
+R16 /1T1R_10x10/R0/C6/ammeter_source/plus /1T1R_10x10/R0/C6/ammeter_source/minus .1
+MQ9 /1T1R_10x10/R0/C9/drain_node /1T1R_10x10/R0/C9/gate_node /1T1R_10x10/R0/C9/source_node GND __Q9 l=250n w=2u
+V41 /1T1R_10x10/R0/C9/gate_node /1T1R_10x10/gates0 DC 0 
+XMR9 /1T1R_10x10/R0/C9/top_electrode_node /1T1R_10x10/R0/C9/drain_node IBM_CMO_HfOx_ReRAM
+V42 /1T1R_10x10/row0 /1T1R_10x10/R0/C9/ammeter_drain/plus DC 0 
+V43 /1T1R_10x10/R0/C9/ammeter_drain/minus /1T1R_10x10/R0/C9/top_electrode_node DC 0 
+R17 /1T1R_10x10/R0/C9/ammeter_drain/plus /1T1R_10x10/R0/C9/ammeter_drain/minus .1
+V44 /1T1R_10x10/R0/C9/source_node /1T1R_10x10/R0/C9/ammeter_source/plus DC 0 
+V45 /1T1R_10x10/R0/C9/ammeter_source/minus /1T1R_10x10/col9 DC 0 
+R18 /1T1R_10x10/R0/C9/ammeter_source/plus /1T1R_10x10/R0/C9/ammeter_source/minus .1
+MQ10 /1T1R_10x10/R0/C4/drain_node /1T1R_10x10/R0/C4/gate_node /1T1R_10x10/R0/C4/source_node GND __Q10 l=250n w=2u
+V46 /1T1R_10x10/R0/C4/gate_node /1T1R_10x10/gates0 DC 0 
+XMR10 /1T1R_10x10/R0/C4/top_electrode_node /1T1R_10x10/R0/C4/drain_node IBM_CMO_HfOx_ReRAM
+V47 /1T1R_10x10/row0 /1T1R_10x10/R0/C4/ammeter_drain/plus DC 0 
+V48 /1T1R_10x10/R0/C4/ammeter_drain/minus /1T1R_10x10/R0/C4/top_electrode_node DC 0 
+R19 /1T1R_10x10/R0/C4/ammeter_drain/plus /1T1R_10x10/R0/C4/ammeter_drain/minus .1
+XV49 /voltage_sources/row0/ammeter/red GND twosource waveform_file=row0_wf_file
+XV50 /voltage_sources/row1/ammeter/red GND twosource waveform_file=row1_wf_file
+XV51 /voltage_sources/row2/ammeter/red GND twosource waveform_file=row2_wf_file
+XV52 /voltage_sources/row3/ammeter/red GND twosource waveform_file=row3_wf_file
+XV53 /voltage_sources/row4/ammeter/red GND twosource waveform_file=row4_wf_file
+XV54 /voltage_sources/col0/ammeter/red GND twosource waveform_file=col0_wf_file
+XV55 /voltage_sources/col1/ammeter/red GND twosource waveform_file=col1_wf_file
+XV56 /voltage_sources/col2/ammeter/red GND twosource waveform_file=col2_wf_file
+XV57 /voltage_sources/col3/ammeter/red GND twosource waveform_file=col3_wf_file
+XV58 /voltage_sources/col4/ammeter/red GND twosource waveform_file=col4_wf_file
+XV59 /voltage_sources/gates0/ammeter/red GND twosource waveform_file=gates0_wf_file
+XV60 /voltage_sources/gates1/ammeter/red GND twosource waveform_file=gates1_wf_file
+XV61 /voltage_sources/gates2/ammeter/red GND twosource waveform_file=gates2_wf_file
+XV62 /voltage_sources/gates3/ammeter/red GND twosource waveform_file=gates3_wf_file
+XV63 /voltage_sources/gates4/ammeter/red GND twosource waveform_file=gates4_wf_file
+V64 /1T1R_10x10/R0/C4/source_node /1T1R_10x10/R0/C4/ammeter_source/plus DC 0 
+V65 /1T1R_10x10/R0/C4/ammeter_source/minus /1T1R_10x10/col4 DC 0 
+R20 /1T1R_10x10/R0/C4/ammeter_source/plus /1T1R_10x10/R0/C4/ammeter_source/minus .1
+MQ11 /1T1R_10x10/R1/C3/drain_node /1T1R_10x10/R1/C3/gate_node /1T1R_10x10/R1/C3/source_node GND __Q11 l=250n w=2u
+V66 /1T1R_10x10/R1/C3/gate_node /1T1R_10x10/gates1 DC 0 
+XMR11 /1T1R_10x10/R1/C3/top_electrode_node /1T1R_10x10/R1/C3/drain_node IBM_CMO_HfOx_ReRAM
+V67 /1T1R_10x10/row1 /1T1R_10x10/R1/C3/ammeter_drain/plus DC 0 
+V68 /1T1R_10x10/R1/C3/ammeter_drain/minus /1T1R_10x10/R1/C3/top_electrode_node DC 0 
+R21 /1T1R_10x10/R1/C3/ammeter_drain/plus /1T1R_10x10/R1/C3/ammeter_drain/minus .1
+V69 /1T1R_10x10/R1/C3/source_node /1T1R_10x10/R1/C3/ammeter_source/plus DC 0 
+V70 /1T1R_10x10/R1/C3/ammeter_source/minus /1T1R_10x10/col3 DC 0 
+R22 /1T1R_10x10/R1/C3/ammeter_source/plus /1T1R_10x10/R1/C3/ammeter_source/minus .1
+MQ12 /1T1R_10x10/R1/C0/drain_node /1T1R_10x10/R1/C0/gate_node /1T1R_10x10/R1/C0/source_node GND __Q12 l=250n w=2u
+V71 /1T1R_10x10/R1/C0/gate_node /1T1R_10x10/gates1 DC 0 
+XMR12 /1T1R_10x10/R1/C0/top_electrode_node /1T1R_10x10/R1/C0/drain_node IBM_CMO_HfOx_ReRAM
+V72 /1T1R_10x10/row1 /1T1R_10x10/R1/C0/ammeter_drain/plus DC 0 
+V73 /1T1R_10x10/R1/C0/ammeter_drain/minus /1T1R_10x10/R1/C0/top_electrode_node DC 0 
+R23 /1T1R_10x10/R1/C0/ammeter_drain/plus /1T1R_10x10/R1/C0/ammeter_drain/minus .1
+V74 /1T1R_10x10/R1/C0/source_node /1T1R_10x10/R1/C0/ammeter_source/plus DC 0 
+V75 /1T1R_10x10/R1/C0/ammeter_source/minus /1T1R_10x10/col0 DC 0 
+R24 /1T1R_10x10/R1/C0/ammeter_source/plus /1T1R_10x10/R1/C0/ammeter_source/minus .1
+MQ13 /1T1R_10x10/R1/C1/drain_node /1T1R_10x10/R1/C1/gate_node /1T1R_10x10/R1/C1/source_node GND __Q13 l=250n w=2u
+V76 /1T1R_10x10/R1/C1/gate_node /1T1R_10x10/gates1 DC 0 
+XMR13 /1T1R_10x10/R1/C1/top_electrode_node /1T1R_10x10/R1/C1/drain_node IBM_CMO_HfOx_ReRAM
+V77 /1T1R_10x10/row1 /1T1R_10x10/R1/C1/ammeter_drain/plus DC 0 
+V78 /1T1R_10x10/R1/C1/ammeter_drain/minus /1T1R_10x10/R1/C1/top_electrode_node DC 0 
+R25 /1T1R_10x10/R1/C1/ammeter_drain/plus /1T1R_10x10/R1/C1/ammeter_drain/minus .1
+V79 /1T1R_10x10/R1/C1/source_node /1T1R_10x10/R1/C1/ammeter_source/plus DC 0 
+V80 /1T1R_10x10/R1/C1/ammeter_source/minus /1T1R_10x10/col1 DC 0 
+R26 /1T1R_10x10/R1/C1/ammeter_source/plus /1T1R_10x10/R1/C1/ammeter_source/minus .1
+MQ14 /1T1R_10x10/R1/C2/drain_node /1T1R_10x10/R1/C2/gate_node /1T1R_10x10/R1/C2/source_node GND __Q14 l=250n w=2u
+V81 /1T1R_10x10/R1/C2/gate_node /1T1R_10x10/gates1 DC 0 
+XMR14 /1T1R_10x10/R1/C2/top_electrode_node /1T1R_10x10/R1/C2/drain_node IBM_CMO_HfOx_ReRAM
+V82 /1T1R_10x10/row1 /1T1R_10x10/R1/C2/ammeter_drain/plus DC 0 
+V83 /1T1R_10x10/R1/C2/ammeter_drain/minus /1T1R_10x10/R1/C2/top_electrode_node DC 0 
+R27 /1T1R_10x10/R1/C2/ammeter_drain/plus /1T1R_10x10/R1/C2/ammeter_drain/minus .1
+V84 /1T1R_10x10/R1/C2/source_node /1T1R_10x10/R1/C2/ammeter_source/plus DC 0 
+V85 /1T1R_10x10/R1/C2/ammeter_source/minus /1T1R_10x10/col2 DC 0 
+R28 /1T1R_10x10/R1/C2/ammeter_source/plus /1T1R_10x10/R1/C2/ammeter_source/minus .1
+MQ15 /1T1R_10x10/R1/C7/drain_node /1T1R_10x10/R1/C7/gate_node /1T1R_10x10/R1/C7/source_node GND __Q15 l=250n w=2u
+V86 /1T1R_10x10/R1/C7/gate_node /1T1R_10x10/gates1 DC 0 
+XMR15 /1T1R_10x10/R1/C7/top_electrode_node /1T1R_10x10/R1/C7/drain_node IBM_CMO_HfOx_ReRAM
+V87 /1T1R_10x10/row1 /1T1R_10x10/R1/C7/ammeter_drain/plus DC 0 
+V88 /1T1R_10x10/R1/C7/ammeter_drain/minus /1T1R_10x10/R1/C7/top_electrode_node DC 0 
+R29 /1T1R_10x10/R1/C7/ammeter_drain/plus /1T1R_10x10/R1/C7/ammeter_drain/minus .1
+V89 /1T1R_10x10/R1/C7/source_node /1T1R_10x10/R1/C7/ammeter_source/plus DC 0 
+V90 /1T1R_10x10/R1/C7/ammeter_source/minus /1T1R_10x10/col7 DC 0 
+R30 /1T1R_10x10/R1/C7/ammeter_source/plus /1T1R_10x10/R1/C7/ammeter_source/minus .1
+MQ16 /1T1R_10x10/R1/C8/drain_node /1T1R_10x10/R1/C8/gate_node /1T1R_10x10/R1/C8/source_node GND __Q16 l=250n w=2u
+V91 /1T1R_10x10/R1/C8/gate_node /1T1R_10x10/gates1 DC 0 
+XMR16 /1T1R_10x10/R1/C8/top_electrode_node /1T1R_10x10/R1/C8/drain_node IBM_CMO_HfOx_ReRAM
+V92 /1T1R_10x10/row1 /1T1R_10x10/R1/C8/ammeter_drain/plus DC 0 
+V93 /1T1R_10x10/R1/C8/ammeter_drain/minus /1T1R_10x10/R1/C8/top_electrode_node DC 0 
+R31 /1T1R_10x10/R1/C8/ammeter_drain/plus /1T1R_10x10/R1/C8/ammeter_drain/minus .1
+V94 /1T1R_10x10/R1/C8/source_node /1T1R_10x10/R1/C8/ammeter_source/plus DC 0 
+V95 /1T1R_10x10/R1/C8/ammeter_source/minus /1T1R_10x10/col8 DC 0 
+R32 /1T1R_10x10/R1/C8/ammeter_source/plus /1T1R_10x10/R1/C8/ammeter_source/minus .1
+MQ17 /1T1R_10x10/R1/C5/drain_node /1T1R_10x10/R1/C5/gate_node /1T1R_10x10/R1/C5/source_node GND __Q17 l=250n w=2u
+V96 /1T1R_10x10/R1/C5/gate_node /1T1R_10x10/gates1 DC 0 
+XMR17 /1T1R_10x10/R1/C5/top_electrode_node /1T1R_10x10/R1/C5/drain_node IBM_CMO_HfOx_ReRAM
+V97 /1T1R_10x10/row1 /1T1R_10x10/R1/C5/ammeter_drain/plus DC 0 
+V98 /1T1R_10x10/R1/C5/ammeter_drain/minus /1T1R_10x10/R1/C5/top_electrode_node DC 0 
+R33 /1T1R_10x10/R1/C5/ammeter_drain/plus /1T1R_10x10/R1/C5/ammeter_drain/minus .1
+V99 /1T1R_10x10/R1/C5/source_node /1T1R_10x10/R1/C5/ammeter_source/plus DC 0 
+V100 /1T1R_10x10/R1/C5/ammeter_source/minus /1T1R_10x10/col5 DC 0 
+R34 /1T1R_10x10/R1/C5/ammeter_source/plus /1T1R_10x10/R1/C5/ammeter_source/minus .1
+MQ18 /1T1R_10x10/R1/C6/drain_node /1T1R_10x10/R1/C6/gate_node /1T1R_10x10/R1/C6/source_node GND __Q18 l=250n w=2u
+V101 /1T1R_10x10/R1/C6/gate_node /1T1R_10x10/gates1 DC 0 
+XMR18 /1T1R_10x10/R1/C6/top_electrode_node /1T1R_10x10/R1/C6/drain_node IBM_CMO_HfOx_ReRAM
+V102 /1T1R_10x10/row1 /1T1R_10x10/R1/C6/ammeter_drain/plus DC 0 
+V103 /1T1R_10x10/R1/C6/ammeter_drain/minus /1T1R_10x10/R1/C6/top_electrode_node DC 0 
+R35 /1T1R_10x10/R1/C6/ammeter_drain/plus /1T1R_10x10/R1/C6/ammeter_drain/minus .1
+V104 /1T1R_10x10/R1/C6/source_node /1T1R_10x10/R1/C6/ammeter_source/plus DC 0 
+V105 /1T1R_10x10/R1/C6/ammeter_source/minus /1T1R_10x10/col6 DC 0 
+R36 /1T1R_10x10/R1/C6/ammeter_source/plus /1T1R_10x10/R1/C6/ammeter_source/minus .1
+MQ19 /1T1R_10x10/R1/C9/drain_node /1T1R_10x10/R1/C9/gate_node /1T1R_10x10/R1/C9/source_node GND __Q19 l=250n w=2u
+V106 /1T1R_10x10/R1/C9/gate_node /1T1R_10x10/gates1 DC 0 
+XMR19 /1T1R_10x10/R1/C9/top_electrode_node /1T1R_10x10/R1/C9/drain_node IBM_CMO_HfOx_ReRAM
+V107 /1T1R_10x10/row1 /1T1R_10x10/R1/C9/ammeter_drain/plus DC 0 
+V108 /1T1R_10x10/R1/C9/ammeter_drain/minus /1T1R_10x10/R1/C9/top_electrode_node DC 0 
+R37 /1T1R_10x10/R1/C9/ammeter_drain/plus /1T1R_10x10/R1/C9/ammeter_drain/minus .1
+V109 /1T1R_10x10/R1/C9/source_node /1T1R_10x10/R1/C9/ammeter_source/plus DC 0 
+V110 /1T1R_10x10/R1/C9/ammeter_source/minus /1T1R_10x10/col9 DC 0 
+R38 /1T1R_10x10/R1/C9/ammeter_source/plus /1T1R_10x10/R1/C9/ammeter_source/minus .1
+MQ20 /1T1R_10x10/R1/C4/drain_node /1T1R_10x10/R1/C4/gate_node /1T1R_10x10/R1/C4/source_node GND __Q20 l=250n w=2u
+V111 /1T1R_10x10/R1/C4/gate_node /1T1R_10x10/gates1 DC 0 
+XMR20 /1T1R_10x10/R1/C4/top_electrode_node /1T1R_10x10/R1/C4/drain_node IBM_CMO_HfOx_ReRAM
+V112 /1T1R_10x10/row1 /1T1R_10x10/R1/C4/ammeter_drain/plus DC 0 
+V113 /1T1R_10x10/R1/C4/ammeter_drain/minus /1T1R_10x10/R1/C4/top_electrode_node DC 0 
+R39 /1T1R_10x10/R1/C4/ammeter_drain/plus /1T1R_10x10/R1/C4/ammeter_drain/minus .1
+V114 /1T1R_10x10/R1/C4/source_node /1T1R_10x10/R1/C4/ammeter_source/plus DC 0 
+V115 /1T1R_10x10/R1/C4/ammeter_source/minus /1T1R_10x10/col4 DC 0 
+R40 /1T1R_10x10/R1/C4/ammeter_source/plus /1T1R_10x10/R1/C4/ammeter_source/minus .1
+MQ21 /1T1R_10x10/R2/C3/drain_node /1T1R_10x10/R2/C3/gate_node /1T1R_10x10/R2/C3/source_node GND __Q21 l=250n w=2u
+V116 /1T1R_10x10/R2/C3/gate_node /1T1R_10x10/gates2 DC 0 
+XMR21 /1T1R_10x10/R2/C3/top_electrode_node /1T1R_10x10/R2/C3/drain_node IBM_CMO_HfOx_ReRAM
+V117 /1T1R_10x10/row2 /1T1R_10x10/R2/C3/ammeter_drain/plus DC 0 
+V118 /1T1R_10x10/R2/C3/ammeter_drain/minus /1T1R_10x10/R2/C3/top_electrode_node DC 0 
+R41 /1T1R_10x10/R2/C3/ammeter_drain/plus /1T1R_10x10/R2/C3/ammeter_drain/minus .1
+V119 /1T1R_10x10/R2/C3/source_node /1T1R_10x10/R2/C3/ammeter_source/plus DC 0 
+V120 /1T1R_10x10/R2/C3/ammeter_source/minus /1T1R_10x10/col3 DC 0 
+R42 /1T1R_10x10/R2/C3/ammeter_source/plus /1T1R_10x10/R2/C3/ammeter_source/minus .1
+MQ22 /1T1R_10x10/R2/C0/drain_node /1T1R_10x10/R2/C0/gate_node /1T1R_10x10/R2/C0/source_node GND __Q22 l=250n w=2u
+V121 /1T1R_10x10/R2/C0/gate_node /1T1R_10x10/gates2 DC 0 
+XMR22 /1T1R_10x10/R2/C0/top_electrode_node /1T1R_10x10/R2/C0/drain_node IBM_CMO_HfOx_ReRAM
+V122 /1T1R_10x10/row2 /1T1R_10x10/R2/C0/ammeter_drain/plus DC 0 
+V123 /1T1R_10x10/R2/C0/ammeter_drain/minus /1T1R_10x10/R2/C0/top_electrode_node DC 0 
+R43 /1T1R_10x10/R2/C0/ammeter_drain/plus /1T1R_10x10/R2/C0/ammeter_drain/minus .1
+V124 /1T1R_10x10/R2/C0/source_node /1T1R_10x10/R2/C0/ammeter_source/plus DC 0 
+V125 /1T1R_10x10/R2/C0/ammeter_source/minus /1T1R_10x10/col0 DC 0 
+R44 /1T1R_10x10/R2/C0/ammeter_source/plus /1T1R_10x10/R2/C0/ammeter_source/minus .1
+MQ23 /1T1R_10x10/R2/C1/drain_node /1T1R_10x10/R2/C1/gate_node /1T1R_10x10/R2/C1/source_node GND __Q23 l=250n w=2u
+V126 /1T1R_10x10/R2/C1/gate_node /1T1R_10x10/gates2 DC 0 
+XMR23 /1T1R_10x10/R2/C1/top_electrode_node /1T1R_10x10/R2/C1/drain_node IBM_CMO_HfOx_ReRAM
+V127 /1T1R_10x10/row2 /1T1R_10x10/R2/C1/ammeter_drain/plus DC 0 
+V128 /1T1R_10x10/R2/C1/ammeter_drain/minus /1T1R_10x10/R2/C1/top_electrode_node DC 0 
+R45 /1T1R_10x10/R2/C1/ammeter_drain/plus /1T1R_10x10/R2/C1/ammeter_drain/minus .1
+V129 /1T1R_10x10/R2/C1/source_node /1T1R_10x10/R2/C1/ammeter_source/plus DC 0 
+V130 /1T1R_10x10/R2/C1/ammeter_source/minus /1T1R_10x10/col1 DC 0 
+R46 /1T1R_10x10/R2/C1/ammeter_source/plus /1T1R_10x10/R2/C1/ammeter_source/minus .1
+MQ24 /1T1R_10x10/R2/C2/drain_node /1T1R_10x10/R2/C2/gate_node /1T1R_10x10/R2/C2/source_node GND __Q24 l=250n w=2u
+V131 /1T1R_10x10/R2/C2/gate_node /1T1R_10x10/gates2 DC 0 
+XMR24 /1T1R_10x10/R2/C2/top_electrode_node /1T1R_10x10/R2/C2/drain_node IBM_CMO_HfOx_ReRAM
+V132 /1T1R_10x10/row2 /1T1R_10x10/R2/C2/ammeter_drain/plus DC 0 
+V133 /1T1R_10x10/R2/C2/ammeter_drain/minus /1T1R_10x10/R2/C2/top_electrode_node DC 0 
+R47 /1T1R_10x10/R2/C2/ammeter_drain/plus /1T1R_10x10/R2/C2/ammeter_drain/minus .1
+V134 /1T1R_10x10/R2/C2/source_node /1T1R_10x10/R2/C2/ammeter_source/plus DC 0 
+V135 /1T1R_10x10/R2/C2/ammeter_source/minus /1T1R_10x10/col2 DC 0 
+R48 /1T1R_10x10/R2/C2/ammeter_source/plus /1T1R_10x10/R2/C2/ammeter_source/minus .1
+MQ25 /1T1R_10x10/R2/C7/drain_node /1T1R_10x10/R2/C7/gate_node /1T1R_10x10/R2/C7/source_node GND __Q25 l=250n w=2u
+V136 /1T1R_10x10/R2/C7/gate_node /1T1R_10x10/gates2 DC 0 
+XMR25 /1T1R_10x10/R2/C7/top_electrode_node /1T1R_10x10/R2/C7/drain_node IBM_CMO_HfOx_ReRAM
+V137 /1T1R_10x10/row2 /1T1R_10x10/R2/C7/ammeter_drain/plus DC 0 
+V138 /1T1R_10x10/R2/C7/ammeter_drain/minus /1T1R_10x10/R2/C7/top_electrode_node DC 0 
+R49 /1T1R_10x10/R2/C7/ammeter_drain/plus /1T1R_10x10/R2/C7/ammeter_drain/minus .1
+V139 /1T1R_10x10/R2/C7/source_node /1T1R_10x10/R2/C7/ammeter_source/plus DC 0 
+V140 /1T1R_10x10/R2/C7/ammeter_source/minus /1T1R_10x10/col7 DC 0 
+R50 /1T1R_10x10/R2/C7/ammeter_source/plus /1T1R_10x10/R2/C7/ammeter_source/minus .1
+MQ26 /1T1R_10x10/R2/C8/drain_node /1T1R_10x10/R2/C8/gate_node /1T1R_10x10/R2/C8/source_node GND __Q26 l=250n w=2u
+V141 /1T1R_10x10/R2/C8/gate_node /1T1R_10x10/gates2 DC 0 
+XMR26 /1T1R_10x10/R2/C8/top_electrode_node /1T1R_10x10/R2/C8/drain_node IBM_CMO_HfOx_ReRAM
+V142 /1T1R_10x10/row2 /1T1R_10x10/R2/C8/ammeter_drain/plus DC 0 
+V143 /1T1R_10x10/R2/C8/ammeter_drain/minus /1T1R_10x10/R2/C8/top_electrode_node DC 0 
+R51 /1T1R_10x10/R2/C8/ammeter_drain/plus /1T1R_10x10/R2/C8/ammeter_drain/minus .1
+V144 /1T1R_10x10/R2/C8/source_node /1T1R_10x10/R2/C8/ammeter_source/plus DC 0 
+V145 /1T1R_10x10/R2/C8/ammeter_source/minus /1T1R_10x10/col8 DC 0 
+R52 /1T1R_10x10/R2/C8/ammeter_source/plus /1T1R_10x10/R2/C8/ammeter_source/minus .1
+MQ27 /1T1R_10x10/R2/C5/drain_node /1T1R_10x10/R2/C5/gate_node /1T1R_10x10/R2/C5/source_node GND __Q27 l=250n w=2u
+V146 /1T1R_10x10/R2/C5/gate_node /1T1R_10x10/gates2 DC 0 
+XMR27 /1T1R_10x10/R2/C5/top_electrode_node /1T1R_10x10/R2/C5/drain_node IBM_CMO_HfOx_ReRAM
+V147 /1T1R_10x10/row2 /1T1R_10x10/R2/C5/ammeter_drain/plus DC 0 
+V148 /1T1R_10x10/R2/C5/ammeter_drain/minus /1T1R_10x10/R2/C5/top_electrode_node DC 0 
+R53 /1T1R_10x10/R2/C5/ammeter_drain/plus /1T1R_10x10/R2/C5/ammeter_drain/minus .1
+V149 /1T1R_10x10/R2/C5/source_node /1T1R_10x10/R2/C5/ammeter_source/plus DC 0 
+V150 /1T1R_10x10/R2/C5/ammeter_source/minus /1T1R_10x10/col5 DC 0 
+R54 /1T1R_10x10/R2/C5/ammeter_source/plus /1T1R_10x10/R2/C5/ammeter_source/minus .1
+MQ28 /1T1R_10x10/R2/C6/drain_node /1T1R_10x10/R2/C6/gate_node /1T1R_10x10/R2/C6/source_node GND __Q28 l=250n w=2u
+V151 /1T1R_10x10/R2/C6/gate_node /1T1R_10x10/gates2 DC 0 
+XMR28 /1T1R_10x10/R2/C6/top_electrode_node /1T1R_10x10/R2/C6/drain_node IBM_CMO_HfOx_ReRAM
+V152 /1T1R_10x10/row2 /1T1R_10x10/R2/C6/ammeter_drain/plus DC 0 
+V153 /1T1R_10x10/R2/C6/ammeter_drain/minus /1T1R_10x10/R2/C6/top_electrode_node DC 0 
+R55 /1T1R_10x10/R2/C6/ammeter_drain/plus /1T1R_10x10/R2/C6/ammeter_drain/minus .1
+V154 /1T1R_10x10/R2/C6/source_node /1T1R_10x10/R2/C6/ammeter_source/plus DC 0 
+V155 /1T1R_10x10/R2/C6/ammeter_source/minus /1T1R_10x10/col6 DC 0 
+R56 /1T1R_10x10/R2/C6/ammeter_source/plus /1T1R_10x10/R2/C6/ammeter_source/minus .1
+MQ29 /1T1R_10x10/R2/C9/drain_node /1T1R_10x10/R2/C9/gate_node /1T1R_10x10/R2/C9/source_node GND __Q29 l=250n w=2u
+V156 /1T1R_10x10/R2/C9/gate_node /1T1R_10x10/gates2 DC 0 
+XMR29 /1T1R_10x10/R2/C9/top_electrode_node /1T1R_10x10/R2/C9/drain_node IBM_CMO_HfOx_ReRAM
+V157 /1T1R_10x10/row2 /1T1R_10x10/R2/C9/ammeter_drain/plus DC 0 
+V158 /1T1R_10x10/R2/C9/ammeter_drain/minus /1T1R_10x10/R2/C9/top_electrode_node DC 0 
+R57 /1T1R_10x10/R2/C9/ammeter_drain/plus /1T1R_10x10/R2/C9/ammeter_drain/minus .1
+V159 /1T1R_10x10/R2/C9/source_node /1T1R_10x10/R2/C9/ammeter_source/plus DC 0 
+V160 /1T1R_10x10/R2/C9/ammeter_source/minus /1T1R_10x10/col9 DC 0 
+R58 /1T1R_10x10/R2/C9/ammeter_source/plus /1T1R_10x10/R2/C9/ammeter_source/minus .1
+MQ30 /1T1R_10x10/R2/C4/drain_node /1T1R_10x10/R2/C4/gate_node /1T1R_10x10/R2/C4/source_node GND __Q30 l=250n w=2u
+V161 /1T1R_10x10/R2/C4/gate_node /1T1R_10x10/gates2 DC 0 
+XMR30 /1T1R_10x10/R2/C4/top_electrode_node /1T1R_10x10/R2/C4/drain_node IBM_CMO_HfOx_ReRAM
+V162 /1T1R_10x10/row2 /1T1R_10x10/R2/C4/ammeter_drain/plus DC 0 
+V163 /1T1R_10x10/R2/C4/ammeter_drain/minus /1T1R_10x10/R2/C4/top_electrode_node DC 0 
+R59 /1T1R_10x10/R2/C4/ammeter_drain/plus /1T1R_10x10/R2/C4/ammeter_drain/minus .1
+V164 /1T1R_10x10/R2/C4/source_node /1T1R_10x10/R2/C4/ammeter_source/plus DC 0 
+V165 /1T1R_10x10/R2/C4/ammeter_source/minus /1T1R_10x10/col4 DC 0 
+R60 /1T1R_10x10/R2/C4/ammeter_source/plus /1T1R_10x10/R2/C4/ammeter_source/minus .1
+MQ31 /1T1R_10x10/R3/C3/drain_node /1T1R_10x10/R3/C3/gate_node /1T1R_10x10/R3/C3/source_node GND __Q31 l=250n w=2u
+V166 /1T1R_10x10/R3/C3/gate_node /1T1R_10x10/gates3 DC 0 
+XMR31 /1T1R_10x10/R3/C3/top_electrode_node /1T1R_10x10/R3/C3/drain_node IBM_CMO_HfOx_ReRAM
+V167 /1T1R_10x10/row3 /1T1R_10x10/R3/C3/ammeter_drain/plus DC 0 
+V168 /1T1R_10x10/R3/C3/ammeter_drain/minus /1T1R_10x10/R3/C3/top_electrode_node DC 0 
+R61 /1T1R_10x10/R3/C3/ammeter_drain/plus /1T1R_10x10/R3/C3/ammeter_drain/minus .1
+V169 /1T1R_10x10/R3/C3/source_node /1T1R_10x10/R3/C3/ammeter_source/plus DC 0 
+V170 /1T1R_10x10/R3/C3/ammeter_source/minus /1T1R_10x10/col3 DC 0 
+R62 /1T1R_10x10/R3/C3/ammeter_source/plus /1T1R_10x10/R3/C3/ammeter_source/minus .1
+MQ32 /1T1R_10x10/R3/C0/drain_node /1T1R_10x10/R3/C0/gate_node /1T1R_10x10/R3/C0/source_node GND __Q32 l=250n w=2u
+V171 /1T1R_10x10/R3/C0/gate_node /1T1R_10x10/gates3 DC 0 
+XMR32 /1T1R_10x10/R3/C0/top_electrode_node /1T1R_10x10/R3/C0/drain_node IBM_CMO_HfOx_ReRAM
+V172 /1T1R_10x10/row3 /1T1R_10x10/R3/C0/ammeter_drain/plus DC 0 
+V173 /1T1R_10x10/R3/C0/ammeter_drain/minus /1T1R_10x10/R3/C0/top_electrode_node DC 0 
+R63 /1T1R_10x10/R3/C0/ammeter_drain/plus /1T1R_10x10/R3/C0/ammeter_drain/minus .1
+V174 /1T1R_10x10/R3/C0/source_node /1T1R_10x10/R3/C0/ammeter_source/plus DC 0 
+V175 /1T1R_10x10/R3/C0/ammeter_source/minus /1T1R_10x10/col0 DC 0 
+R64 /1T1R_10x10/R3/C0/ammeter_source/plus /1T1R_10x10/R3/C0/ammeter_source/minus .1
+MQ33 /1T1R_10x10/R3/C1/drain_node /1T1R_10x10/R3/C1/gate_node /1T1R_10x10/R3/C1/source_node GND __Q33 l=250n w=2u
+V176 /1T1R_10x10/R3/C1/gate_node /1T1R_10x10/gates3 DC 0 
+XMR33 /1T1R_10x10/R3/C1/top_electrode_node /1T1R_10x10/R3/C1/drain_node IBM_CMO_HfOx_ReRAM
+V177 /1T1R_10x10/row3 /1T1R_10x10/R3/C1/ammeter_drain/plus DC 0 
+V178 /1T1R_10x10/R3/C1/ammeter_drain/minus /1T1R_10x10/R3/C1/top_electrode_node DC 0 
+R65 /1T1R_10x10/R3/C1/ammeter_drain/plus /1T1R_10x10/R3/C1/ammeter_drain/minus .1
+V179 /1T1R_10x10/R3/C1/source_node /1T1R_10x10/R3/C1/ammeter_source/plus DC 0 
+V180 /1T1R_10x10/R3/C1/ammeter_source/minus /1T1R_10x10/col1 DC 0 
+R66 /1T1R_10x10/R3/C1/ammeter_source/plus /1T1R_10x10/R3/C1/ammeter_source/minus .1
+MQ34 /1T1R_10x10/R3/C2/drain_node /1T1R_10x10/R3/C2/gate_node /1T1R_10x10/R3/C2/source_node GND __Q34 l=250n w=2u
+V181 /1T1R_10x10/R3/C2/gate_node /1T1R_10x10/gates3 DC 0 
+XMR34 /1T1R_10x10/R3/C2/top_electrode_node /1T1R_10x10/R3/C2/drain_node IBM_CMO_HfOx_ReRAM
+V182 /1T1R_10x10/row3 /1T1R_10x10/R3/C2/ammeter_drain/plus DC 0 
+V183 /1T1R_10x10/R3/C2/ammeter_drain/minus /1T1R_10x10/R3/C2/top_electrode_node DC 0 
+R67 /1T1R_10x10/R3/C2/ammeter_drain/plus /1T1R_10x10/R3/C2/ammeter_drain/minus .1
+V184 /1T1R_10x10/R3/C2/source_node /1T1R_10x10/R3/C2/ammeter_source/plus DC 0 
+V185 /1T1R_10x10/R3/C2/ammeter_source/minus /1T1R_10x10/col2 DC 0 
+R68 /1T1R_10x10/R3/C2/ammeter_source/plus /1T1R_10x10/R3/C2/ammeter_source/minus .1
+MQ35 /1T1R_10x10/R3/C7/drain_node /1T1R_10x10/R3/C7/gate_node /1T1R_10x10/R3/C7/source_node GND __Q35 l=250n w=2u
+V186 /1T1R_10x10/R3/C7/gate_node /1T1R_10x10/gates3 DC 0 
+XMR35 /1T1R_10x10/R3/C7/top_electrode_node /1T1R_10x10/R3/C7/drain_node IBM_CMO_HfOx_ReRAM
+V187 /1T1R_10x10/row3 /1T1R_10x10/R3/C7/ammeter_drain/plus DC 0 
+V188 /1T1R_10x10/R3/C7/ammeter_drain/minus /1T1R_10x10/R3/C7/top_electrode_node DC 0 
+R69 /1T1R_10x10/R3/C7/ammeter_drain/plus /1T1R_10x10/R3/C7/ammeter_drain/minus .1
+V189 /1T1R_10x10/R3/C7/source_node /1T1R_10x10/R3/C7/ammeter_source/plus DC 0 
+V190 /1T1R_10x10/R3/C7/ammeter_source/minus /1T1R_10x10/col7 DC 0 
+R70 /1T1R_10x10/R3/C7/ammeter_source/plus /1T1R_10x10/R3/C7/ammeter_source/minus .1
+MQ36 /1T1R_10x10/R3/C8/drain_node /1T1R_10x10/R3/C8/gate_node /1T1R_10x10/R3/C8/source_node GND __Q36 l=250n w=2u
+V191 /1T1R_10x10/R3/C8/gate_node /1T1R_10x10/gates3 DC 0 
+XMR36 /1T1R_10x10/R3/C8/top_electrode_node /1T1R_10x10/R3/C8/drain_node IBM_CMO_HfOx_ReRAM
+V192 /1T1R_10x10/row3 /1T1R_10x10/R3/C8/ammeter_drain/plus DC 0 
+V193 /1T1R_10x10/R3/C8/ammeter_drain/minus /1T1R_10x10/R3/C8/top_electrode_node DC 0 
+R71 /1T1R_10x10/R3/C8/ammeter_drain/plus /1T1R_10x10/R3/C8/ammeter_drain/minus .1
+V194 /1T1R_10x10/R3/C8/source_node /1T1R_10x10/R3/C8/ammeter_source/plus DC 0 
+V195 /1T1R_10x10/R3/C8/ammeter_source/minus /1T1R_10x10/col8 DC 0 
+R72 /1T1R_10x10/R3/C8/ammeter_source/plus /1T1R_10x10/R3/C8/ammeter_source/minus .1
+MQ37 /1T1R_10x10/R3/C5/drain_node /1T1R_10x10/R3/C5/gate_node /1T1R_10x10/R3/C5/source_node GND __Q37 l=250n w=2u
+V196 /1T1R_10x10/R3/C5/gate_node /1T1R_10x10/gates3 DC 0 
+XMR37 /1T1R_10x10/R3/C5/top_electrode_node /1T1R_10x10/R3/C5/drain_node IBM_CMO_HfOx_ReRAM
+V197 /1T1R_10x10/row3 /1T1R_10x10/R3/C5/ammeter_drain/plus DC 0 
+V198 /1T1R_10x10/R3/C5/ammeter_drain/minus /1T1R_10x10/R3/C5/top_electrode_node DC 0 
+R73 /1T1R_10x10/R3/C5/ammeter_drain/plus /1T1R_10x10/R3/C5/ammeter_drain/minus .1
+V199 /1T1R_10x10/R3/C5/source_node /1T1R_10x10/R3/C5/ammeter_source/plus DC 0 
+V200 /1T1R_10x10/R3/C5/ammeter_source/minus /1T1R_10x10/col5 DC 0 
+R74 /1T1R_10x10/R3/C5/ammeter_source/plus /1T1R_10x10/R3/C5/ammeter_source/minus .1
+MQ38 /1T1R_10x10/R3/C6/drain_node /1T1R_10x10/R3/C6/gate_node /1T1R_10x10/R3/C6/source_node GND __Q38 l=250n w=2u
+V201 /1T1R_10x10/R3/C6/gate_node /1T1R_10x10/gates3 DC 0 
+XMR38 /1T1R_10x10/R3/C6/top_electrode_node /1T1R_10x10/R3/C6/drain_node IBM_CMO_HfOx_ReRAM
+V202 /1T1R_10x10/row3 /1T1R_10x10/R3/C6/ammeter_drain/plus DC 0 
+V203 /1T1R_10x10/R3/C6/ammeter_drain/minus /1T1R_10x10/R3/C6/top_electrode_node DC 0 
+R75 /1T1R_10x10/R3/C6/ammeter_drain/plus /1T1R_10x10/R3/C6/ammeter_drain/minus .1
+V204 /1T1R_10x10/R3/C6/source_node /1T1R_10x10/R3/C6/ammeter_source/plus DC 0 
+V205 /1T1R_10x10/R3/C6/ammeter_source/minus /1T1R_10x10/col6 DC 0 
+R76 /1T1R_10x10/R3/C6/ammeter_source/plus /1T1R_10x10/R3/C6/ammeter_source/minus .1
+MQ39 /1T1R_10x10/R3/C9/drain_node /1T1R_10x10/R3/C9/gate_node /1T1R_10x10/R3/C9/source_node GND __Q39 l=250n w=2u
+V206 /1T1R_10x10/R3/C9/gate_node /1T1R_10x10/gates3 DC 0 
+XMR39 /1T1R_10x10/R3/C9/top_electrode_node /1T1R_10x10/R3/C9/drain_node IBM_CMO_HfOx_ReRAM
+V207 /1T1R_10x10/row3 /1T1R_10x10/R3/C9/ammeter_drain/plus DC 0 
+V208 /1T1R_10x10/R3/C9/ammeter_drain/minus /1T1R_10x10/R3/C9/top_electrode_node DC 0 
+R77 /1T1R_10x10/R3/C9/ammeter_drain/plus /1T1R_10x10/R3/C9/ammeter_drain/minus .1
+V209 /1T1R_10x10/R3/C9/source_node /1T1R_10x10/R3/C9/ammeter_source/plus DC 0 
+V210 /1T1R_10x10/R3/C9/ammeter_source/minus /1T1R_10x10/col9 DC 0 
+R78 /1T1R_10x10/R3/C9/ammeter_source/plus /1T1R_10x10/R3/C9/ammeter_source/minus .1
+MQ40 /1T1R_10x10/R3/C4/drain_node /1T1R_10x10/R3/C4/gate_node /1T1R_10x10/R3/C4/source_node GND __Q40 l=250n w=2u
+V211 /1T1R_10x10/R3/C4/gate_node /1T1R_10x10/gates3 DC 0 
+XMR40 /1T1R_10x10/R3/C4/top_electrode_node /1T1R_10x10/R3/C4/drain_node IBM_CMO_HfOx_ReRAM
+V212 /1T1R_10x10/row3 /1T1R_10x10/R3/C4/ammeter_drain/plus DC 0 
+V213 /1T1R_10x10/R3/C4/ammeter_drain/minus /1T1R_10x10/R3/C4/top_electrode_node DC 0 
+R79 /1T1R_10x10/R3/C4/ammeter_drain/plus /1T1R_10x10/R3/C4/ammeter_drain/minus .1
+V214 /1T1R_10x10/R3/C4/source_node /1T1R_10x10/R3/C4/ammeter_source/plus DC 0 
+V215 /1T1R_10x10/R3/C4/ammeter_source/minus /1T1R_10x10/col4 DC 0 
+R80 /1T1R_10x10/R3/C4/ammeter_source/plus /1T1R_10x10/R3/C4/ammeter_source/minus .1
+MQ41 /1T1R_10x10/R4/C3/drain_node /1T1R_10x10/R4/C3/gate_node /1T1R_10x10/R4/C3/source_node GND __Q41 l=250n w=2u
+V216 /1T1R_10x10/R4/C3/gate_node /1T1R_10x10/gates4 DC 0 
+XMR41 /1T1R_10x10/R4/C3/top_electrode_node /1T1R_10x10/R4/C3/drain_node IBM_CMO_HfOx_ReRAM
+V217 /1T1R_10x10/row4 /1T1R_10x10/R4/C3/ammeter_drain/plus DC 0 
+V218 /1T1R_10x10/R4/C3/ammeter_drain/minus /1T1R_10x10/R4/C3/top_electrode_node DC 0 
+R81 /1T1R_10x10/R4/C3/ammeter_drain/plus /1T1R_10x10/R4/C3/ammeter_drain/minus .1
+V219 /1T1R_10x10/R4/C3/source_node /1T1R_10x10/R4/C3/ammeter_source/plus DC 0 
+V220 /1T1R_10x10/R4/C3/ammeter_source/minus /1T1R_10x10/col3 DC 0 
+R82 /1T1R_10x10/R4/C3/ammeter_source/plus /1T1R_10x10/R4/C3/ammeter_source/minus .1
+MQ42 /1T1R_10x10/R4/C0/drain_node /1T1R_10x10/R4/C0/gate_node /1T1R_10x10/R4/C0/source_node GND __Q42 l=250n w=2u
+V221 /1T1R_10x10/R4/C0/gate_node /1T1R_10x10/gates4 DC 0 
+XMR42 /1T1R_10x10/R4/C0/top_electrode_node /1T1R_10x10/R4/C0/drain_node IBM_CMO_HfOx_ReRAM
+V222 /1T1R_10x10/row4 /1T1R_10x10/R4/C0/ammeter_drain/plus DC 0 
+V223 /1T1R_10x10/R4/C0/ammeter_drain/minus /1T1R_10x10/R4/C0/top_electrode_node DC 0 
+R83 /1T1R_10x10/R4/C0/ammeter_drain/plus /1T1R_10x10/R4/C0/ammeter_drain/minus .1
+V224 /1T1R_10x10/R4/C0/source_node /1T1R_10x10/R4/C0/ammeter_source/plus DC 0 
+V225 /1T1R_10x10/R4/C0/ammeter_source/minus /1T1R_10x10/col0 DC 0 
+R84 /1T1R_10x10/R4/C0/ammeter_source/plus /1T1R_10x10/R4/C0/ammeter_source/minus .1
+MQ43 /1T1R_10x10/R4/C1/drain_node /1T1R_10x10/R4/C1/gate_node /1T1R_10x10/R4/C1/source_node GND __Q43 l=250n w=2u
+V226 /1T1R_10x10/R4/C1/gate_node /1T1R_10x10/gates4 DC 0 
+XMR43 /1T1R_10x10/R4/C1/top_electrode_node /1T1R_10x10/R4/C1/drain_node IBM_CMO_HfOx_ReRAM
+V227 /1T1R_10x10/row4 /1T1R_10x10/R4/C1/ammeter_drain/plus DC 0 
+V228 /1T1R_10x10/R4/C1/ammeter_drain/minus /1T1R_10x10/R4/C1/top_electrode_node DC 0 
+R85 /1T1R_10x10/R4/C1/ammeter_drain/plus /1T1R_10x10/R4/C1/ammeter_drain/minus .1
+V229 /1T1R_10x10/R4/C1/source_node /1T1R_10x10/R4/C1/ammeter_source/plus DC 0 
+V230 /1T1R_10x10/R4/C1/ammeter_source/minus /1T1R_10x10/col1 DC 0 
+R86 /1T1R_10x10/R4/C1/ammeter_source/plus /1T1R_10x10/R4/C1/ammeter_source/minus .1
+MQ44 /1T1R_10x10/R4/C2/drain_node /1T1R_10x10/R4/C2/gate_node /1T1R_10x10/R4/C2/source_node GND __Q44 l=250n w=2u
+V231 /1T1R_10x10/R4/C2/gate_node /1T1R_10x10/gates4 DC 0 
+XMR44 /1T1R_10x10/R4/C2/top_electrode_node /1T1R_10x10/R4/C2/drain_node IBM_CMO_HfOx_ReRAM
+V232 /1T1R_10x10/row4 /1T1R_10x10/R4/C2/ammeter_drain/plus DC 0 
+V233 /1T1R_10x10/R4/C2/ammeter_drain/minus /1T1R_10x10/R4/C2/top_electrode_node DC 0 
+R87 /1T1R_10x10/R4/C2/ammeter_drain/plus /1T1R_10x10/R4/C2/ammeter_drain/minus .1
+V234 /1T1R_10x10/R4/C2/source_node /1T1R_10x10/R4/C2/ammeter_source/plus DC 0 
+V235 /1T1R_10x10/R4/C2/ammeter_source/minus /1T1R_10x10/col2 DC 0 
+R88 /1T1R_10x10/R4/C2/ammeter_source/plus /1T1R_10x10/R4/C2/ammeter_source/minus .1
+MQ45 /1T1R_10x10/R4/C7/drain_node /1T1R_10x10/R4/C7/gate_node /1T1R_10x10/R4/C7/source_node GND __Q45 l=250n w=2u
+V236 /1T1R_10x10/R4/C7/gate_node /1T1R_10x10/gates4 DC 0 
+XMR45 /1T1R_10x10/R4/C7/top_electrode_node /1T1R_10x10/R4/C7/drain_node IBM_CMO_HfOx_ReRAM
+V237 /1T1R_10x10/row4 /1T1R_10x10/R4/C7/ammeter_drain/plus DC 0 
+V238 /1T1R_10x10/R4/C7/ammeter_drain/minus /1T1R_10x10/R4/C7/top_electrode_node DC 0 
+R89 /1T1R_10x10/R4/C7/ammeter_drain/plus /1T1R_10x10/R4/C7/ammeter_drain/minus .1
+V239 /1T1R_10x10/R4/C7/source_node /1T1R_10x10/R4/C7/ammeter_source/plus DC 0 
+V240 /1T1R_10x10/R4/C7/ammeter_source/minus /1T1R_10x10/col7 DC 0 
+R90 /1T1R_10x10/R4/C7/ammeter_source/plus /1T1R_10x10/R4/C7/ammeter_source/minus .1
+MQ46 /1T1R_10x10/R4/C8/drain_node /1T1R_10x10/R4/C8/gate_node /1T1R_10x10/R4/C8/source_node GND __Q46 l=250n w=2u
+V241 /1T1R_10x10/R4/C8/gate_node /1T1R_10x10/gates4 DC 0 
+XMR46 /1T1R_10x10/R4/C8/top_electrode_node /1T1R_10x10/R4/C8/drain_node IBM_CMO_HfOx_ReRAM
+V242 /1T1R_10x10/row4 /1T1R_10x10/R4/C8/ammeter_drain/plus DC 0 
+V243 /1T1R_10x10/R4/C8/ammeter_drain/minus /1T1R_10x10/R4/C8/top_electrode_node DC 0 
+R91 /1T1R_10x10/R4/C8/ammeter_drain/plus /1T1R_10x10/R4/C8/ammeter_drain/minus .1
+V244 /1T1R_10x10/R4/C8/source_node /1T1R_10x10/R4/C8/ammeter_source/plus DC 0 
+V245 /1T1R_10x10/R4/C8/ammeter_source/minus /1T1R_10x10/col8 DC 0 
+R92 /1T1R_10x10/R4/C8/ammeter_source/plus /1T1R_10x10/R4/C8/ammeter_source/minus .1
+MQ47 /1T1R_10x10/R4/C5/drain_node /1T1R_10x10/R4/C5/gate_node /1T1R_10x10/R4/C5/source_node GND __Q47 l=250n w=2u
+V246 /1T1R_10x10/R4/C5/gate_node /1T1R_10x10/gates4 DC 0 
+XMR47 /1T1R_10x10/R4/C5/top_electrode_node /1T1R_10x10/R4/C5/drain_node IBM_CMO_HfOx_ReRAM
+V247 /1T1R_10x10/row4 /1T1R_10x10/R4/C5/ammeter_drain/plus DC 0 
+V248 /1T1R_10x10/R4/C5/ammeter_drain/minus /1T1R_10x10/R4/C5/top_electrode_node DC 0 
+R93 /1T1R_10x10/R4/C5/ammeter_drain/plus /1T1R_10x10/R4/C5/ammeter_drain/minus .1
+V249 /1T1R_10x10/R4/C5/source_node /1T1R_10x10/R4/C5/ammeter_source/plus DC 0 
+V250 /1T1R_10x10/R4/C5/ammeter_source/minus /1T1R_10x10/col5 DC 0 
+R94 /1T1R_10x10/R4/C5/ammeter_source/plus /1T1R_10x10/R4/C5/ammeter_source/minus .1
+MQ48 /1T1R_10x10/R4/C6/drain_node /1T1R_10x10/R4/C6/gate_node /1T1R_10x10/R4/C6/source_node GND __Q48 l=250n w=2u
+V251 /1T1R_10x10/R4/C6/gate_node /1T1R_10x10/gates4 DC 0 
+XMR48 /1T1R_10x10/R4/C6/top_electrode_node /1T1R_10x10/R4/C6/drain_node IBM_CMO_HfOx_ReRAM
+V252 /1T1R_10x10/row4 /1T1R_10x10/R4/C6/ammeter_drain/plus DC 0 
+V253 /1T1R_10x10/R4/C6/ammeter_drain/minus /1T1R_10x10/R4/C6/top_electrode_node DC 0 
+R95 /1T1R_10x10/R4/C6/ammeter_drain/plus /1T1R_10x10/R4/C6/ammeter_drain/minus .1
+V254 /1T1R_10x10/R4/C6/source_node /1T1R_10x10/R4/C6/ammeter_source/plus DC 0 
+V255 /1T1R_10x10/R4/C6/ammeter_source/minus /1T1R_10x10/col6 DC 0 
+R96 /1T1R_10x10/R4/C6/ammeter_source/plus /1T1R_10x10/R4/C6/ammeter_source/minus .1
+MQ49 /1T1R_10x10/R4/C9/drain_node /1T1R_10x10/R4/C9/gate_node /1T1R_10x10/R4/C9/source_node GND __Q49 l=250n w=2u
+V256 /1T1R_10x10/R4/C9/gate_node /1T1R_10x10/gates4 DC 0 
+XMR49 /1T1R_10x10/R4/C9/top_electrode_node /1T1R_10x10/R4/C9/drain_node IBM_CMO_HfOx_ReRAM
+XV257 /voltage_sources/col5/ammeter/red GND twosource waveform_file=col5_wf_file
+V258 /voltage_sources/col5/ammeter/red /voltage_sources/col5/ammeter/plus DC 0 
+V259 /voltage_sources/col5/ammeter/minus /1T1R_10x10/col5 DC 0 
+R97 /voltage_sources/col5/ammeter/plus /voltage_sources/col5/ammeter/minus .1
+XV260 /voltage_sources/col6/ammeter/red GND twosource waveform_file=col6_wf_file
+V261 /voltage_sources/col6/ammeter/red /voltage_sources/col6/ammeter/plus DC 0 
+V262 /voltage_sources/col6/ammeter/minus /1T1R_10x10/col6 DC 0 
+R98 /voltage_sources/col6/ammeter/plus /voltage_sources/col6/ammeter/minus .1
+XV263 /voltage_sources/col7/ammeter/red GND twosource waveform_file=col7_wf_file
+V264 /voltage_sources/col7/ammeter/red /voltage_sources/col7/ammeter/plus DC 0 
+V265 /voltage_sources/col7/ammeter/minus /1T1R_10x10/col7 DC 0 
+R99 /voltage_sources/col7/ammeter/plus /voltage_sources/col7/ammeter/minus .1
+XV266 /voltage_sources/col8/ammeter/red GND twosource waveform_file=col8_wf_file
+V267 /voltage_sources/col8/ammeter/red /voltage_sources/col8/ammeter/plus DC 0 
+V268 /voltage_sources/col8/ammeter/minus /1T1R_10x10/col8 DC 0 
+R100 /voltage_sources/col8/ammeter/plus /voltage_sources/col8/ammeter/minus .1
+XV269 /voltage_sources/col9/ammeter/red GND twosource waveform_file=col9_wf_file
+V270 /voltage_sources/col9/ammeter/red /voltage_sources/col9/ammeter/plus DC 0 
+V271 /voltage_sources/col9/ammeter/minus /1T1R_10x10/col9 DC 0 
+R101 /voltage_sources/col9/ammeter/plus /voltage_sources/col9/ammeter/minus .1
+V272 /1T1R_10x10/row4 /1T1R_10x10/R4/C9/ammeter_drain/plus DC 0 
+V273 /1T1R_10x10/R4/C9/ammeter_drain/minus /1T1R_10x10/R4/C9/top_electrode_node DC 0 
+R102 /1T1R_10x10/R4/C9/ammeter_drain/plus /1T1R_10x10/R4/C9/ammeter_drain/minus .1
+V274 /1T1R_10x10/R4/C9/source_node /1T1R_10x10/R4/C9/ammeter_source/plus DC 0 
+V275 /1T1R_10x10/R4/C9/ammeter_source/minus /1T1R_10x10/col9 DC 0 
+R103 /1T1R_10x10/R4/C9/ammeter_source/plus /1T1R_10x10/R4/C9/ammeter_source/minus .1
+MQ50 /1T1R_10x10/R4/C4/drain_node /1T1R_10x10/R4/C4/gate_node /1T1R_10x10/R4/C4/source_node GND __Q50 l=250n w=2u
+V276 /1T1R_10x10/R4/C4/gate_node /1T1R_10x10/gates4 DC 0 
+XMR50 /1T1R_10x10/R4/C4/top_electrode_node /1T1R_10x10/R4/C4/drain_node IBM_CMO_HfOx_ReRAM
+V277 /1T1R_10x10/row4 /1T1R_10x10/R4/C4/ammeter_drain/plus DC 0 
+V278 /1T1R_10x10/R4/C4/ammeter_drain/minus /1T1R_10x10/R4/C4/top_electrode_node DC 0 
+R104 /1T1R_10x10/R4/C4/ammeter_drain/plus /1T1R_10x10/R4/C4/ammeter_drain/minus .1
+V279 /1T1R_10x10/R4/C4/source_node /1T1R_10x10/R4/C4/ammeter_source/plus DC 0 
+V280 /1T1R_10x10/R4/C4/ammeter_source/minus /1T1R_10x10/col4 DC 0 
+R105 /1T1R_10x10/R4/C4/ammeter_source/plus /1T1R_10x10/R4/C4/ammeter_source/minus .1
+MQ51 /1T1R_10x10/R5/C3/drain_node /1T1R_10x10/R5/C3/gate_node /1T1R_10x10/R5/C3/source_node GND __Q51 l=250n w=2u
+V281 /1T1R_10x10/R5/C3/gate_node /1T1R_10x10/gates5 DC 0 
+XMR51 /1T1R_10x10/R5/C3/top_electrode_node /1T1R_10x10/R5/C3/drain_node IBM_CMO_HfOx_ReRAM
+V282 /1T1R_10x10/row5 /1T1R_10x10/R5/C3/ammeter_drain/plus DC 0 
+V283 /1T1R_10x10/R5/C3/ammeter_drain/minus /1T1R_10x10/R5/C3/top_electrode_node DC 0 
+R106 /1T1R_10x10/R5/C3/ammeter_drain/plus /1T1R_10x10/R5/C3/ammeter_drain/minus .1
+V284 /1T1R_10x10/R5/C3/source_node /1T1R_10x10/R5/C3/ammeter_source/plus DC 0 
+V285 /1T1R_10x10/R5/C3/ammeter_source/minus /1T1R_10x10/col3 DC 0 
+R107 /1T1R_10x10/R5/C3/ammeter_source/plus /1T1R_10x10/R5/C3/ammeter_source/minus .1
+MQ52 /1T1R_10x10/R5/C0/drain_node /1T1R_10x10/R5/C0/gate_node /1T1R_10x10/R5/C0/source_node GND __Q52 l=250n w=2u
+V286 /1T1R_10x10/R5/C0/gate_node /1T1R_10x10/gates5 DC 0 
+XMR52 /1T1R_10x10/R5/C0/top_electrode_node /1T1R_10x10/R5/C0/drain_node IBM_CMO_HfOx_ReRAM
+V287 /1T1R_10x10/row5 /1T1R_10x10/R5/C0/ammeter_drain/plus DC 0 
+V288 /1T1R_10x10/R5/C0/ammeter_drain/minus /1T1R_10x10/R5/C0/top_electrode_node DC 0 
+R108 /1T1R_10x10/R5/C0/ammeter_drain/plus /1T1R_10x10/R5/C0/ammeter_drain/minus .1
+V289 /1T1R_10x10/R5/C0/source_node /1T1R_10x10/R5/C0/ammeter_source/plus DC 0 
+V290 /1T1R_10x10/R5/C0/ammeter_source/minus /1T1R_10x10/col0 DC 0 
+R109 /1T1R_10x10/R5/C0/ammeter_source/plus /1T1R_10x10/R5/C0/ammeter_source/minus .1
+MQ53 /1T1R_10x10/R5/C1/drain_node /1T1R_10x10/R5/C1/gate_node /1T1R_10x10/R5/C1/source_node GND __Q53 l=250n w=2u
+V291 /1T1R_10x10/R5/C1/gate_node /1T1R_10x10/gates5 DC 0 
+XMR53 /1T1R_10x10/R5/C1/top_electrode_node /1T1R_10x10/R5/C1/drain_node IBM_CMO_HfOx_ReRAM
+V292 /1T1R_10x10/row5 /1T1R_10x10/R5/C1/ammeter_drain/plus DC 0 
+V293 /1T1R_10x10/R5/C1/ammeter_drain/minus /1T1R_10x10/R5/C1/top_electrode_node DC 0 
+R110 /1T1R_10x10/R5/C1/ammeter_drain/plus /1T1R_10x10/R5/C1/ammeter_drain/minus .1
+V294 /1T1R_10x10/R5/C1/source_node /1T1R_10x10/R5/C1/ammeter_source/plus DC 0 
+V295 /1T1R_10x10/R5/C1/ammeter_source/minus /1T1R_10x10/col1 DC 0 
+R111 /1T1R_10x10/R5/C1/ammeter_source/plus /1T1R_10x10/R5/C1/ammeter_source/minus .1
+MQ54 /1T1R_10x10/R5/C2/drain_node /1T1R_10x10/R5/C2/gate_node /1T1R_10x10/R5/C2/source_node GND __Q54 l=250n w=2u
+V296 /1T1R_10x10/R5/C2/gate_node /1T1R_10x10/gates5 DC 0 
+XMR54 /1T1R_10x10/R5/C2/top_electrode_node /1T1R_10x10/R5/C2/drain_node IBM_CMO_HfOx_ReRAM
+V297 /1T1R_10x10/row5 /1T1R_10x10/R5/C2/ammeter_drain/plus DC 0 
+V298 /1T1R_10x10/R5/C2/ammeter_drain/minus /1T1R_10x10/R5/C2/top_electrode_node DC 0 
+R112 /1T1R_10x10/R5/C2/ammeter_drain/plus /1T1R_10x10/R5/C2/ammeter_drain/minus .1
+V299 /1T1R_10x10/R5/C2/source_node /1T1R_10x10/R5/C2/ammeter_source/plus DC 0 
+V300 /1T1R_10x10/R5/C2/ammeter_source/minus /1T1R_10x10/col2 DC 0 
+R113 /1T1R_10x10/R5/C2/ammeter_source/plus /1T1R_10x10/R5/C2/ammeter_source/minus .1
+MQ55 /1T1R_10x10/R5/C7/drain_node /1T1R_10x10/R5/C7/gate_node /1T1R_10x10/R5/C7/source_node GND __Q55 l=250n w=2u
+V301 /1T1R_10x10/R5/C7/gate_node /1T1R_10x10/gates5 DC 0 
+XMR55 /1T1R_10x10/R5/C7/top_electrode_node /1T1R_10x10/R5/C7/drain_node IBM_CMO_HfOx_ReRAM
+V302 /1T1R_10x10/row5 /1T1R_10x10/R5/C7/ammeter_drain/plus DC 0 
+V303 /1T1R_10x10/R5/C7/ammeter_drain/minus /1T1R_10x10/R5/C7/top_electrode_node DC 0 
+R114 /1T1R_10x10/R5/C7/ammeter_drain/plus /1T1R_10x10/R5/C7/ammeter_drain/minus .1
+V304 /1T1R_10x10/R5/C7/source_node /1T1R_10x10/R5/C7/ammeter_source/plus DC 0 
+V305 /1T1R_10x10/R5/C7/ammeter_source/minus /1T1R_10x10/col7 DC 0 
+R115 /1T1R_10x10/R5/C7/ammeter_source/plus /1T1R_10x10/R5/C7/ammeter_source/minus .1
+MQ56 /1T1R_10x10/R5/C8/drain_node /1T1R_10x10/R5/C8/gate_node /1T1R_10x10/R5/C8/source_node GND __Q56 l=250n w=2u
+V306 /1T1R_10x10/R5/C8/gate_node /1T1R_10x10/gates5 DC 0 
+XMR56 /1T1R_10x10/R5/C8/top_electrode_node /1T1R_10x10/R5/C8/drain_node IBM_CMO_HfOx_ReRAM
+V307 /1T1R_10x10/row5 /1T1R_10x10/R5/C8/ammeter_drain/plus DC 0 
+V308 /1T1R_10x10/R5/C8/ammeter_drain/minus /1T1R_10x10/R5/C8/top_electrode_node DC 0 
+R116 /1T1R_10x10/R5/C8/ammeter_drain/plus /1T1R_10x10/R5/C8/ammeter_drain/minus .1
+V309 /1T1R_10x10/R5/C8/source_node /1T1R_10x10/R5/C8/ammeter_source/plus DC 0 
+V310 /1T1R_10x10/R5/C8/ammeter_source/minus /1T1R_10x10/col8 DC 0 
+R117 /1T1R_10x10/R5/C8/ammeter_source/plus /1T1R_10x10/R5/C8/ammeter_source/minus .1
+MQ57 /1T1R_10x10/R5/C5/drain_node /1T1R_10x10/R5/C5/gate_node /1T1R_10x10/R5/C5/source_node GND __Q57 l=250n w=2u
+V311 /1T1R_10x10/R5/C5/gate_node /1T1R_10x10/gates5 DC 0 
+XMR57 /1T1R_10x10/R5/C5/top_electrode_node /1T1R_10x10/R5/C5/drain_node IBM_CMO_HfOx_ReRAM
+V312 /1T1R_10x10/row5 /1T1R_10x10/R5/C5/ammeter_drain/plus DC 0 
+V313 /1T1R_10x10/R5/C5/ammeter_drain/minus /1T1R_10x10/R5/C5/top_electrode_node DC 0 
+R118 /1T1R_10x10/R5/C5/ammeter_drain/plus /1T1R_10x10/R5/C5/ammeter_drain/minus .1
+V314 /1T1R_10x10/R5/C5/source_node /1T1R_10x10/R5/C5/ammeter_source/plus DC 0 
+V315 /1T1R_10x10/R5/C5/ammeter_source/minus /1T1R_10x10/col5 DC 0 
+R119 /1T1R_10x10/R5/C5/ammeter_source/plus /1T1R_10x10/R5/C5/ammeter_source/minus .1
+MQ58 /1T1R_10x10/R5/C6/drain_node /1T1R_10x10/R5/C6/gate_node /1T1R_10x10/R5/C6/source_node GND __Q58 l=250n w=2u
+V316 /1T1R_10x10/R5/C6/gate_node /1T1R_10x10/gates5 DC 0 
+XMR58 /1T1R_10x10/R5/C6/top_electrode_node /1T1R_10x10/R5/C6/drain_node IBM_CMO_HfOx_ReRAM
+V317 /1T1R_10x10/row5 /1T1R_10x10/R5/C6/ammeter_drain/plus DC 0 
+V318 /1T1R_10x10/R5/C6/ammeter_drain/minus /1T1R_10x10/R5/C6/top_electrode_node DC 0 
+R120 /1T1R_10x10/R5/C6/ammeter_drain/plus /1T1R_10x10/R5/C6/ammeter_drain/minus .1
+V319 /1T1R_10x10/R5/C6/source_node /1T1R_10x10/R5/C6/ammeter_source/plus DC 0 
+V320 /1T1R_10x10/R5/C6/ammeter_source/minus /1T1R_10x10/col6 DC 0 
+R121 /1T1R_10x10/R5/C6/ammeter_source/plus /1T1R_10x10/R5/C6/ammeter_source/minus .1
+MQ59 /1T1R_10x10/R5/C9/drain_node /1T1R_10x10/R5/C9/gate_node /1T1R_10x10/R5/C9/source_node GND __Q59 l=250n w=2u
+V321 /1T1R_10x10/R5/C9/gate_node /1T1R_10x10/gates5 DC 0 
+XMR59 /1T1R_10x10/R5/C9/top_electrode_node /1T1R_10x10/R5/C9/drain_node IBM_CMO_HfOx_ReRAM
+V322 /1T1R_10x10/row5 /1T1R_10x10/R5/C9/ammeter_drain/plus DC 0 
+V323 /1T1R_10x10/R5/C9/ammeter_drain/minus /1T1R_10x10/R5/C9/top_electrode_node DC 0 
+R122 /1T1R_10x10/R5/C9/ammeter_drain/plus /1T1R_10x10/R5/C9/ammeter_drain/minus .1
+V324 /1T1R_10x10/R5/C9/source_node /1T1R_10x10/R5/C9/ammeter_source/plus DC 0 
+V325 /1T1R_10x10/R5/C9/ammeter_source/minus /1T1R_10x10/col9 DC 0 
+R123 /1T1R_10x10/R5/C9/ammeter_source/plus /1T1R_10x10/R5/C9/ammeter_source/minus .1
+MQ60 /1T1R_10x10/R5/C4/drain_node /1T1R_10x10/R5/C4/gate_node /1T1R_10x10/R5/C4/source_node GND __Q60 l=250n w=2u
+V326 /1T1R_10x10/R5/C4/gate_node /1T1R_10x10/gates5 DC 0 
+XMR60 /1T1R_10x10/R5/C4/top_electrode_node /1T1R_10x10/R5/C4/drain_node IBM_CMO_HfOx_ReRAM
+V327 /1T1R_10x10/row5 /1T1R_10x10/R5/C4/ammeter_drain/plus DC 0 
+V328 /1T1R_10x10/R5/C4/ammeter_drain/minus /1T1R_10x10/R5/C4/top_electrode_node DC 0 
+R124 /1T1R_10x10/R5/C4/ammeter_drain/plus /1T1R_10x10/R5/C4/ammeter_drain/minus .1
+V329 /1T1R_10x10/R5/C4/source_node /1T1R_10x10/R5/C4/ammeter_source/plus DC 0 
+V330 /1T1R_10x10/R5/C4/ammeter_source/minus /1T1R_10x10/col4 DC 0 
+R125 /1T1R_10x10/R5/C4/ammeter_source/plus /1T1R_10x10/R5/C4/ammeter_source/minus .1
+MQ61 /1T1R_10x10/R6/C3/drain_node /1T1R_10x10/R6/C3/gate_node /1T1R_10x10/R6/C3/source_node GND __Q61 l=250n w=2u
+V331 /1T1R_10x10/R6/C3/gate_node /1T1R_10x10/gates6 DC 0 
+XMR61 /1T1R_10x10/R6/C3/top_electrode_node /1T1R_10x10/R6/C3/drain_node IBM_CMO_HfOx_ReRAM
+V332 /1T1R_10x10/row6 /1T1R_10x10/R6/C3/ammeter_drain/plus DC 0 
+V333 /1T1R_10x10/R6/C3/ammeter_drain/minus /1T1R_10x10/R6/C3/top_electrode_node DC 0 
+R126 /1T1R_10x10/R6/C3/ammeter_drain/plus /1T1R_10x10/R6/C3/ammeter_drain/minus .1
+V334 /1T1R_10x10/R6/C3/source_node /1T1R_10x10/R6/C3/ammeter_source/plus DC 0 
+V335 /1T1R_10x10/R6/C3/ammeter_source/minus /1T1R_10x10/col3 DC 0 
+R127 /1T1R_10x10/R6/C3/ammeter_source/plus /1T1R_10x10/R6/C3/ammeter_source/minus .1
+MQ62 /1T1R_10x10/R6/C0/drain_node /1T1R_10x10/R6/C0/gate_node /1T1R_10x10/R6/C0/source_node GND __Q62 l=250n w=2u
+V336 /1T1R_10x10/R6/C0/gate_node /1T1R_10x10/gates6 DC 0 
+XMR62 /1T1R_10x10/R6/C0/top_electrode_node /1T1R_10x10/R6/C0/drain_node IBM_CMO_HfOx_ReRAM
+V337 /1T1R_10x10/row6 /1T1R_10x10/R6/C0/ammeter_drain/plus DC 0 
+V338 /1T1R_10x10/R6/C0/ammeter_drain/minus /1T1R_10x10/R6/C0/top_electrode_node DC 0 
+R128 /1T1R_10x10/R6/C0/ammeter_drain/plus /1T1R_10x10/R6/C0/ammeter_drain/minus .1
+V339 /1T1R_10x10/R6/C0/source_node /1T1R_10x10/R6/C0/ammeter_source/plus DC 0 
+V340 /1T1R_10x10/R6/C0/ammeter_source/minus /1T1R_10x10/col0 DC 0 
+R129 /1T1R_10x10/R6/C0/ammeter_source/plus /1T1R_10x10/R6/C0/ammeter_source/minus .1
+MQ63 /1T1R_10x10/R6/C1/drain_node /1T1R_10x10/R6/C1/gate_node /1T1R_10x10/R6/C1/source_node GND __Q63 l=250n w=2u
+V341 /1T1R_10x10/R6/C1/gate_node /1T1R_10x10/gates6 DC 0 
+XMR63 /1T1R_10x10/R6/C1/top_electrode_node /1T1R_10x10/R6/C1/drain_node IBM_CMO_HfOx_ReRAM
+V342 /1T1R_10x10/row6 /1T1R_10x10/R6/C1/ammeter_drain/plus DC 0 
+V343 /1T1R_10x10/R6/C1/ammeter_drain/minus /1T1R_10x10/R6/C1/top_electrode_node DC 0 
+R130 /1T1R_10x10/R6/C1/ammeter_drain/plus /1T1R_10x10/R6/C1/ammeter_drain/minus .1
+V344 /1T1R_10x10/R6/C1/source_node /1T1R_10x10/R6/C1/ammeter_source/plus DC 0 
+V345 /1T1R_10x10/R6/C1/ammeter_source/minus /1T1R_10x10/col1 DC 0 
+R131 /1T1R_10x10/R6/C1/ammeter_source/plus /1T1R_10x10/R6/C1/ammeter_source/minus .1
+MQ64 /1T1R_10x10/R6/C2/drain_node /1T1R_10x10/R6/C2/gate_node /1T1R_10x10/R6/C2/source_node GND __Q64 l=250n w=2u
+V346 /1T1R_10x10/R6/C2/gate_node /1T1R_10x10/gates6 DC 0 
+XMR64 /1T1R_10x10/R6/C2/top_electrode_node /1T1R_10x10/R6/C2/drain_node IBM_CMO_HfOx_ReRAM
+V347 /1T1R_10x10/row6 /1T1R_10x10/R6/C2/ammeter_drain/plus DC 0 
+V348 /1T1R_10x10/R6/C2/ammeter_drain/minus /1T1R_10x10/R6/C2/top_electrode_node DC 0 
+R132 /1T1R_10x10/R6/C2/ammeter_drain/plus /1T1R_10x10/R6/C2/ammeter_drain/minus .1
+V349 /1T1R_10x10/R6/C2/source_node /1T1R_10x10/R6/C2/ammeter_source/plus DC 0 
+V350 /1T1R_10x10/R6/C2/ammeter_source/minus /1T1R_10x10/col2 DC 0 
+R133 /1T1R_10x10/R6/C2/ammeter_source/plus /1T1R_10x10/R6/C2/ammeter_source/minus .1
+MQ65 /1T1R_10x10/R6/C7/drain_node /1T1R_10x10/R6/C7/gate_node /1T1R_10x10/R6/C7/source_node GND __Q65 l=250n w=2u
+V351 /1T1R_10x10/R6/C7/gate_node /1T1R_10x10/gates6 DC 0 
+XMR65 /1T1R_10x10/R6/C7/top_electrode_node /1T1R_10x10/R6/C7/drain_node IBM_CMO_HfOx_ReRAM
+V352 /1T1R_10x10/row6 /1T1R_10x10/R6/C7/ammeter_drain/plus DC 0 
+V353 /1T1R_10x10/R6/C7/ammeter_drain/minus /1T1R_10x10/R6/C7/top_electrode_node DC 0 
+R134 /1T1R_10x10/R6/C7/ammeter_drain/plus /1T1R_10x10/R6/C7/ammeter_drain/minus .1
+V354 /1T1R_10x10/R6/C7/source_node /1T1R_10x10/R6/C7/ammeter_source/plus DC 0 
+V355 /1T1R_10x10/R6/C7/ammeter_source/minus /1T1R_10x10/col7 DC 0 
+R135 /1T1R_10x10/R6/C7/ammeter_source/plus /1T1R_10x10/R6/C7/ammeter_source/minus .1
+MQ66 /1T1R_10x10/R6/C8/drain_node /1T1R_10x10/R6/C8/gate_node /1T1R_10x10/R6/C8/source_node GND __Q66 l=250n w=2u
+V356 /1T1R_10x10/R6/C8/gate_node /1T1R_10x10/gates6 DC 0 
+XMR66 /1T1R_10x10/R6/C8/top_electrode_node /1T1R_10x10/R6/C8/drain_node IBM_CMO_HfOx_ReRAM
+V357 /1T1R_10x10/row6 /1T1R_10x10/R6/C8/ammeter_drain/plus DC 0 
+V358 /1T1R_10x10/R6/C8/ammeter_drain/minus /1T1R_10x10/R6/C8/top_electrode_node DC 0 
+R136 /1T1R_10x10/R6/C8/ammeter_drain/plus /1T1R_10x10/R6/C8/ammeter_drain/minus .1
+V359 /1T1R_10x10/R6/C8/source_node /1T1R_10x10/R6/C8/ammeter_source/plus DC 0 
+V360 /1T1R_10x10/R6/C8/ammeter_source/minus /1T1R_10x10/col8 DC 0 
+R137 /1T1R_10x10/R6/C8/ammeter_source/plus /1T1R_10x10/R6/C8/ammeter_source/minus .1
+MQ67 /1T1R_10x10/R6/C5/drain_node /1T1R_10x10/R6/C5/gate_node /1T1R_10x10/R6/C5/source_node GND __Q67 l=250n w=2u
+V361 /1T1R_10x10/R6/C5/gate_node /1T1R_10x10/gates6 DC 0 
+XMR67 /1T1R_10x10/R6/C5/top_electrode_node /1T1R_10x10/R6/C5/drain_node IBM_CMO_HfOx_ReRAM
+V362 /1T1R_10x10/row6 /1T1R_10x10/R6/C5/ammeter_drain/plus DC 0 
+V363 /1T1R_10x10/R6/C5/ammeter_drain/minus /1T1R_10x10/R6/C5/top_electrode_node DC 0 
+R138 /1T1R_10x10/R6/C5/ammeter_drain/plus /1T1R_10x10/R6/C5/ammeter_drain/minus .1
+V364 /1T1R_10x10/R6/C5/source_node /1T1R_10x10/R6/C5/ammeter_source/plus DC 0 
+V365 /1T1R_10x10/R6/C5/ammeter_source/minus /1T1R_10x10/col5 DC 0 
+R139 /1T1R_10x10/R6/C5/ammeter_source/plus /1T1R_10x10/R6/C5/ammeter_source/minus .1
+MQ68 /1T1R_10x10/R6/C6/drain_node /1T1R_10x10/R6/C6/gate_node /1T1R_10x10/R6/C6/source_node GND __Q68 l=250n w=2u
+V366 /1T1R_10x10/R6/C6/gate_node /1T1R_10x10/gates6 DC 0 
+XMR68 /1T1R_10x10/R6/C6/top_electrode_node /1T1R_10x10/R6/C6/drain_node IBM_CMO_HfOx_ReRAM
+V367 /1T1R_10x10/row6 /1T1R_10x10/R6/C6/ammeter_drain/plus DC 0 
+V368 /1T1R_10x10/R6/C6/ammeter_drain/minus /1T1R_10x10/R6/C6/top_electrode_node DC 0 
+R140 /1T1R_10x10/R6/C6/ammeter_drain/plus /1T1R_10x10/R6/C6/ammeter_drain/minus .1
+V369 /1T1R_10x10/R6/C6/source_node /1T1R_10x10/R6/C6/ammeter_source/plus DC 0 
+V370 /1T1R_10x10/R6/C6/ammeter_source/minus /1T1R_10x10/col6 DC 0 
+R141 /1T1R_10x10/R6/C6/ammeter_source/plus /1T1R_10x10/R6/C6/ammeter_source/minus .1
+MQ69 /1T1R_10x10/R6/C9/drain_node /1T1R_10x10/R6/C9/gate_node /1T1R_10x10/R6/C9/source_node GND __Q69 l=250n w=2u
+V371 /1T1R_10x10/R6/C9/gate_node /1T1R_10x10/gates6 DC 0 
+XMR69 /1T1R_10x10/R6/C9/top_electrode_node /1T1R_10x10/R6/C9/drain_node IBM_CMO_HfOx_ReRAM
+V372 /1T1R_10x10/row6 /1T1R_10x10/R6/C9/ammeter_drain/plus DC 0 
+V373 /1T1R_10x10/R6/C9/ammeter_drain/minus /1T1R_10x10/R6/C9/top_electrode_node DC 0 
+R142 /1T1R_10x10/R6/C9/ammeter_drain/plus /1T1R_10x10/R6/C9/ammeter_drain/minus .1
+V374 /1T1R_10x10/R6/C9/source_node /1T1R_10x10/R6/C9/ammeter_source/plus DC 0 
+V375 /1T1R_10x10/R6/C9/ammeter_source/minus /1T1R_10x10/col9 DC 0 
+R143 /1T1R_10x10/R6/C9/ammeter_source/plus /1T1R_10x10/R6/C9/ammeter_source/minus .1
+MQ70 /1T1R_10x10/R6/C4/drain_node /1T1R_10x10/R6/C4/gate_node /1T1R_10x10/R6/C4/source_node GND __Q70 l=250n w=2u
+V376 /1T1R_10x10/R6/C4/gate_node /1T1R_10x10/gates6 DC 0 
+XMR70 /1T1R_10x10/R6/C4/top_electrode_node /1T1R_10x10/R6/C4/drain_node IBM_CMO_HfOx_ReRAM
+V377 /1T1R_10x10/row6 /1T1R_10x10/R6/C4/ammeter_drain/plus DC 0 
+V378 /1T1R_10x10/R6/C4/ammeter_drain/minus /1T1R_10x10/R6/C4/top_electrode_node DC 0 
+R144 /1T1R_10x10/R6/C4/ammeter_drain/plus /1T1R_10x10/R6/C4/ammeter_drain/minus .1
+V379 /1T1R_10x10/R6/C4/source_node /1T1R_10x10/R6/C4/ammeter_source/plus DC 0 
+V380 /1T1R_10x10/R6/C4/ammeter_source/minus /1T1R_10x10/col4 DC 0 
+R145 /1T1R_10x10/R6/C4/ammeter_source/plus /1T1R_10x10/R6/C4/ammeter_source/minus .1
+MQ71 /1T1R_10x10/R7/C3/drain_node /1T1R_10x10/R7/C3/gate_node /1T1R_10x10/R7/C3/source_node GND __Q71 l=250n w=2u
+V381 /1T1R_10x10/R7/C3/gate_node /1T1R_10x10/gates7 DC 0 
+XMR71 /1T1R_10x10/R7/C3/top_electrode_node /1T1R_10x10/R7/C3/drain_node IBM_CMO_HfOx_ReRAM
+V382 /1T1R_10x10/row7 /1T1R_10x10/R7/C3/ammeter_drain/plus DC 0 
+V383 /1T1R_10x10/R7/C3/ammeter_drain/minus /1T1R_10x10/R7/C3/top_electrode_node DC 0 
+R146 /1T1R_10x10/R7/C3/ammeter_drain/plus /1T1R_10x10/R7/C3/ammeter_drain/minus .1
+V384 /1T1R_10x10/R7/C3/source_node /1T1R_10x10/R7/C3/ammeter_source/plus DC 0 
+V385 /1T1R_10x10/R7/C3/ammeter_source/minus /1T1R_10x10/col3 DC 0 
+R147 /1T1R_10x10/R7/C3/ammeter_source/plus /1T1R_10x10/R7/C3/ammeter_source/minus .1
+MQ72 /1T1R_10x10/R7/C0/drain_node /1T1R_10x10/R7/C0/gate_node /1T1R_10x10/R7/C0/source_node GND __Q72 l=250n w=2u
+V386 /1T1R_10x10/R7/C0/gate_node /1T1R_10x10/gates7 DC 0 
+XMR72 /1T1R_10x10/R7/C0/top_electrode_node /1T1R_10x10/R7/C0/drain_node IBM_CMO_HfOx_ReRAM
+V387 /1T1R_10x10/row7 /1T1R_10x10/R7/C0/ammeter_drain/plus DC 0 
+V388 /1T1R_10x10/R7/C0/ammeter_drain/minus /1T1R_10x10/R7/C0/top_electrode_node DC 0 
+R148 /1T1R_10x10/R7/C0/ammeter_drain/plus /1T1R_10x10/R7/C0/ammeter_drain/minus .1
+V389 /1T1R_10x10/R7/C0/source_node /1T1R_10x10/R7/C0/ammeter_source/plus DC 0 
+V390 /1T1R_10x10/R7/C0/ammeter_source/minus /1T1R_10x10/col0 DC 0 
+R149 /1T1R_10x10/R7/C0/ammeter_source/plus /1T1R_10x10/R7/C0/ammeter_source/minus .1
+MQ73 /1T1R_10x10/R7/C1/drain_node /1T1R_10x10/R7/C1/gate_node /1T1R_10x10/R7/C1/source_node GND __Q73 l=250n w=2u
+V391 /1T1R_10x10/R7/C1/gate_node /1T1R_10x10/gates7 DC 0 
+XMR73 /1T1R_10x10/R7/C1/top_electrode_node /1T1R_10x10/R7/C1/drain_node IBM_CMO_HfOx_ReRAM
+V392 /1T1R_10x10/row7 /1T1R_10x10/R7/C1/ammeter_drain/plus DC 0 
+V393 /1T1R_10x10/R7/C1/ammeter_drain/minus /1T1R_10x10/R7/C1/top_electrode_node DC 0 
+R150 /1T1R_10x10/R7/C1/ammeter_drain/plus /1T1R_10x10/R7/C1/ammeter_drain/minus .1
+V394 /1T1R_10x10/R7/C1/source_node /1T1R_10x10/R7/C1/ammeter_source/plus DC 0 
+V395 /1T1R_10x10/R7/C1/ammeter_source/minus /1T1R_10x10/col1 DC 0 
+R151 /1T1R_10x10/R7/C1/ammeter_source/plus /1T1R_10x10/R7/C1/ammeter_source/minus .1
+MQ74 /1T1R_10x10/R7/C2/drain_node /1T1R_10x10/R7/C2/gate_node /1T1R_10x10/R7/C2/source_node GND __Q74 l=250n w=2u
+V396 /1T1R_10x10/R7/C2/gate_node /1T1R_10x10/gates7 DC 0 
+XMR74 /1T1R_10x10/R7/C2/top_electrode_node /1T1R_10x10/R7/C2/drain_node IBM_CMO_HfOx_ReRAM
+V397 /1T1R_10x10/row7 /1T1R_10x10/R7/C2/ammeter_drain/plus DC 0 
+V398 /1T1R_10x10/R7/C2/ammeter_drain/minus /1T1R_10x10/R7/C2/top_electrode_node DC 0 
+R152 /1T1R_10x10/R7/C2/ammeter_drain/plus /1T1R_10x10/R7/C2/ammeter_drain/minus .1
+V399 /1T1R_10x10/R7/C2/source_node /1T1R_10x10/R7/C2/ammeter_source/plus DC 0 
+V400 /1T1R_10x10/R7/C2/ammeter_source/minus /1T1R_10x10/col2 DC 0 
+R153 /1T1R_10x10/R7/C2/ammeter_source/plus /1T1R_10x10/R7/C2/ammeter_source/minus .1
+MQ75 /1T1R_10x10/R7/C7/drain_node /1T1R_10x10/R7/C7/gate_node /1T1R_10x10/R7/C7/source_node GND __Q75 l=250n w=2u
+V401 /1T1R_10x10/R7/C7/gate_node /1T1R_10x10/gates7 DC 0 
+XMR75 /1T1R_10x10/R7/C7/top_electrode_node /1T1R_10x10/R7/C7/drain_node IBM_CMO_HfOx_ReRAM
+V402 /1T1R_10x10/row7 /1T1R_10x10/R7/C7/ammeter_drain/plus DC 0 
+V403 /1T1R_10x10/R7/C7/ammeter_drain/minus /1T1R_10x10/R7/C7/top_electrode_node DC 0 
+R154 /1T1R_10x10/R7/C7/ammeter_drain/plus /1T1R_10x10/R7/C7/ammeter_drain/minus .1
+V404 /1T1R_10x10/R7/C7/source_node /1T1R_10x10/R7/C7/ammeter_source/plus DC 0 
+V405 /1T1R_10x10/R7/C7/ammeter_source/minus /1T1R_10x10/col7 DC 0 
+R155 /1T1R_10x10/R7/C7/ammeter_source/plus /1T1R_10x10/R7/C7/ammeter_source/minus .1
+MQ76 /1T1R_10x10/R7/C8/drain_node /1T1R_10x10/R7/C8/gate_node /1T1R_10x10/R7/C8/source_node GND __Q76 l=250n w=2u
+V406 /1T1R_10x10/R7/C8/gate_node /1T1R_10x10/gates7 DC 0 
+XMR76 /1T1R_10x10/R7/C8/top_electrode_node /1T1R_10x10/R7/C8/drain_node IBM_CMO_HfOx_ReRAM
+V407 /1T1R_10x10/row7 /1T1R_10x10/R7/C8/ammeter_drain/plus DC 0 
+V408 /1T1R_10x10/R7/C8/ammeter_drain/minus /1T1R_10x10/R7/C8/top_electrode_node DC 0 
+R156 /1T1R_10x10/R7/C8/ammeter_drain/plus /1T1R_10x10/R7/C8/ammeter_drain/minus .1
+V409 /1T1R_10x10/R7/C8/source_node /1T1R_10x10/R7/C8/ammeter_source/plus DC 0 
+V410 /1T1R_10x10/R7/C8/ammeter_source/minus /1T1R_10x10/col8 DC 0 
+R157 /1T1R_10x10/R7/C8/ammeter_source/plus /1T1R_10x10/R7/C8/ammeter_source/minus .1
+MQ77 /1T1R_10x10/R7/C5/drain_node /1T1R_10x10/R7/C5/gate_node /1T1R_10x10/R7/C5/source_node GND __Q77 l=250n w=2u
+V411 /1T1R_10x10/R7/C5/gate_node /1T1R_10x10/gates7 DC 0 
+XMR77 /1T1R_10x10/R7/C5/top_electrode_node /1T1R_10x10/R7/C5/drain_node IBM_CMO_HfOx_ReRAM
+V412 /1T1R_10x10/row7 /1T1R_10x10/R7/C5/ammeter_drain/plus DC 0 
+V413 /1T1R_10x10/R7/C5/ammeter_drain/minus /1T1R_10x10/R7/C5/top_electrode_node DC 0 
+R158 /1T1R_10x10/R7/C5/ammeter_drain/plus /1T1R_10x10/R7/C5/ammeter_drain/minus .1
+V414 /1T1R_10x10/R7/C5/source_node /1T1R_10x10/R7/C5/ammeter_source/plus DC 0 
+V415 /1T1R_10x10/R7/C5/ammeter_source/minus /1T1R_10x10/col5 DC 0 
+R159 /1T1R_10x10/R7/C5/ammeter_source/plus /1T1R_10x10/R7/C5/ammeter_source/minus .1
+MQ78 /1T1R_10x10/R7/C6/drain_node /1T1R_10x10/R7/C6/gate_node /1T1R_10x10/R7/C6/source_node GND __Q78 l=250n w=2u
+V416 /1T1R_10x10/R7/C6/gate_node /1T1R_10x10/gates7 DC 0 
+XMR78 /1T1R_10x10/R7/C6/top_electrode_node /1T1R_10x10/R7/C6/drain_node IBM_CMO_HfOx_ReRAM
+V417 /1T1R_10x10/row7 /1T1R_10x10/R7/C6/ammeter_drain/plus DC 0 
+V418 /1T1R_10x10/R7/C6/ammeter_drain/minus /1T1R_10x10/R7/C6/top_electrode_node DC 0 
+R160 /1T1R_10x10/R7/C6/ammeter_drain/plus /1T1R_10x10/R7/C6/ammeter_drain/minus .1
+V419 /1T1R_10x10/R7/C6/source_node /1T1R_10x10/R7/C6/ammeter_source/plus DC 0 
+V420 /1T1R_10x10/R7/C6/ammeter_source/minus /1T1R_10x10/col6 DC 0 
+R161 /1T1R_10x10/R7/C6/ammeter_source/plus /1T1R_10x10/R7/C6/ammeter_source/minus .1
+MQ79 /1T1R_10x10/R7/C9/drain_node /1T1R_10x10/R7/C9/gate_node /1T1R_10x10/R7/C9/source_node GND __Q79 l=250n w=2u
+V421 /1T1R_10x10/R7/C9/gate_node /1T1R_10x10/gates7 DC 0 
+XMR79 /1T1R_10x10/R7/C9/top_electrode_node /1T1R_10x10/R7/C9/drain_node IBM_CMO_HfOx_ReRAM
+V422 /1T1R_10x10/row7 /1T1R_10x10/R7/C9/ammeter_drain/plus DC 0 
+V423 /1T1R_10x10/R7/C9/ammeter_drain/minus /1T1R_10x10/R7/C9/top_electrode_node DC 0 
+R162 /1T1R_10x10/R7/C9/ammeter_drain/plus /1T1R_10x10/R7/C9/ammeter_drain/minus .1
+V424 /1T1R_10x10/R7/C9/source_node /1T1R_10x10/R7/C9/ammeter_source/plus DC 0 
+V425 /1T1R_10x10/R7/C9/ammeter_source/minus /1T1R_10x10/col9 DC 0 
+R163 /1T1R_10x10/R7/C9/ammeter_source/plus /1T1R_10x10/R7/C9/ammeter_source/minus .1
+MQ80 /1T1R_10x10/R7/C4/drain_node /1T1R_10x10/R7/C4/gate_node /1T1R_10x10/R7/C4/source_node GND __Q80 l=250n w=2u
+V426 /1T1R_10x10/R7/C4/gate_node /1T1R_10x10/gates7 DC 0 
+XMR80 /1T1R_10x10/R7/C4/top_electrode_node /1T1R_10x10/R7/C4/drain_node IBM_CMO_HfOx_ReRAM
+V427 /1T1R_10x10/row7 /1T1R_10x10/R7/C4/ammeter_drain/plus DC 0 
+V428 /1T1R_10x10/R7/C4/ammeter_drain/minus /1T1R_10x10/R7/C4/top_electrode_node DC 0 
+R164 /1T1R_10x10/R7/C4/ammeter_drain/plus /1T1R_10x10/R7/C4/ammeter_drain/minus .1
+V429 /1T1R_10x10/R7/C4/source_node /1T1R_10x10/R7/C4/ammeter_source/plus DC 0 
+V430 /1T1R_10x10/R7/C4/ammeter_source/minus /1T1R_10x10/col4 DC 0 
+R165 /1T1R_10x10/R7/C4/ammeter_source/plus /1T1R_10x10/R7/C4/ammeter_source/minus .1
+MQ81 /1T1R_10x10/R8/C3/drain_node /1T1R_10x10/R8/C3/gate_node /1T1R_10x10/R8/C3/source_node GND __Q81 l=250n w=2u
+V431 /1T1R_10x10/R8/C3/gate_node /1T1R_10x10/gates8 DC 0 
+XMR81 /1T1R_10x10/R8/C3/top_electrode_node /1T1R_10x10/R8/C3/drain_node IBM_CMO_HfOx_ReRAM
+V432 /1T1R_10x10/row8 /1T1R_10x10/R8/C3/ammeter_drain/plus DC 0 
+V433 /1T1R_10x10/R8/C3/ammeter_drain/minus /1T1R_10x10/R8/C3/top_electrode_node DC 0 
+R166 /1T1R_10x10/R8/C3/ammeter_drain/plus /1T1R_10x10/R8/C3/ammeter_drain/minus .1
+V434 /1T1R_10x10/R8/C3/source_node /1T1R_10x10/R8/C3/ammeter_source/plus DC 0 
+V435 /1T1R_10x10/R8/C3/ammeter_source/minus /1T1R_10x10/col3 DC 0 
+R167 /1T1R_10x10/R8/C3/ammeter_source/plus /1T1R_10x10/R8/C3/ammeter_source/minus .1
+MQ82 /1T1R_10x10/R8/C0/drain_node /1T1R_10x10/R8/C0/gate_node /1T1R_10x10/R8/C0/source_node GND __Q82 l=250n w=2u
+V436 /1T1R_10x10/R8/C0/gate_node /1T1R_10x10/gates8 DC 0 
+XMR82 /1T1R_10x10/R8/C0/top_electrode_node /1T1R_10x10/R8/C0/drain_node IBM_CMO_HfOx_ReRAM
+V437 /1T1R_10x10/row8 /1T1R_10x10/R8/C0/ammeter_drain/plus DC 0 
+V438 /1T1R_10x10/R8/C0/ammeter_drain/minus /1T1R_10x10/R8/C0/top_electrode_node DC 0 
+R168 /1T1R_10x10/R8/C0/ammeter_drain/plus /1T1R_10x10/R8/C0/ammeter_drain/minus .1
+V439 /1T1R_10x10/R8/C0/source_node /1T1R_10x10/R8/C0/ammeter_source/plus DC 0 
+V440 /1T1R_10x10/R8/C0/ammeter_source/minus /1T1R_10x10/col0 DC 0 
+R169 /1T1R_10x10/R8/C0/ammeter_source/plus /1T1R_10x10/R8/C0/ammeter_source/minus .1
+MQ83 /1T1R_10x10/R8/C1/drain_node /1T1R_10x10/R8/C1/gate_node /1T1R_10x10/R8/C1/source_node GND __Q83 l=250n w=2u
+V441 /1T1R_10x10/R8/C1/gate_node /1T1R_10x10/gates8 DC 0 
+XMR83 /1T1R_10x10/R8/C1/top_electrode_node /1T1R_10x10/R8/C1/drain_node IBM_CMO_HfOx_ReRAM
+V442 /1T1R_10x10/row8 /1T1R_10x10/R8/C1/ammeter_drain/plus DC 0 
+V443 /1T1R_10x10/R8/C1/ammeter_drain/minus /1T1R_10x10/R8/C1/top_electrode_node DC 0 
+R170 /1T1R_10x10/R8/C1/ammeter_drain/plus /1T1R_10x10/R8/C1/ammeter_drain/minus .1
+V444 /1T1R_10x10/R8/C1/source_node /1T1R_10x10/R8/C1/ammeter_source/plus DC 0 
+V445 /1T1R_10x10/R8/C1/ammeter_source/minus /1T1R_10x10/col1 DC 0 
+R171 /1T1R_10x10/R8/C1/ammeter_source/plus /1T1R_10x10/R8/C1/ammeter_source/minus .1
+MQ84 /1T1R_10x10/R8/C2/drain_node /1T1R_10x10/R8/C2/gate_node /1T1R_10x10/R8/C2/source_node GND __Q84 l=250n w=2u
+V446 /1T1R_10x10/R8/C2/gate_node /1T1R_10x10/gates8 DC 0 
+XMR84 /1T1R_10x10/R8/C2/top_electrode_node /1T1R_10x10/R8/C2/drain_node IBM_CMO_HfOx_ReRAM
+V447 /1T1R_10x10/row8 /1T1R_10x10/R8/C2/ammeter_drain/plus DC 0 
+V448 /1T1R_10x10/R8/C2/ammeter_drain/minus /1T1R_10x10/R8/C2/top_electrode_node DC 0 
+R172 /1T1R_10x10/R8/C2/ammeter_drain/plus /1T1R_10x10/R8/C2/ammeter_drain/minus .1
+V449 /1T1R_10x10/R8/C2/source_node /1T1R_10x10/R8/C2/ammeter_source/plus DC 0 
+V450 /1T1R_10x10/R8/C2/ammeter_source/minus /1T1R_10x10/col2 DC 0 
+R173 /1T1R_10x10/R8/C2/ammeter_source/plus /1T1R_10x10/R8/C2/ammeter_source/minus .1
+MQ85 /1T1R_10x10/R8/C7/drain_node /1T1R_10x10/R8/C7/gate_node /1T1R_10x10/R8/C7/source_node GND __Q85 l=250n w=2u
+V451 /1T1R_10x10/R8/C7/gate_node /1T1R_10x10/gates8 DC 0 
+XMR85 /1T1R_10x10/R8/C7/top_electrode_node /1T1R_10x10/R8/C7/drain_node IBM_CMO_HfOx_ReRAM
+V452 /1T1R_10x10/row8 /1T1R_10x10/R8/C7/ammeter_drain/plus DC 0 
+V453 /1T1R_10x10/R8/C7/ammeter_drain/minus /1T1R_10x10/R8/C7/top_electrode_node DC 0 
+R174 /1T1R_10x10/R8/C7/ammeter_drain/plus /1T1R_10x10/R8/C7/ammeter_drain/minus .1
+V454 /1T1R_10x10/R8/C7/source_node /1T1R_10x10/R8/C7/ammeter_source/plus DC 0 
+V455 /1T1R_10x10/R8/C7/ammeter_source/minus /1T1R_10x10/col7 DC 0 
+R175 /1T1R_10x10/R8/C7/ammeter_source/plus /1T1R_10x10/R8/C7/ammeter_source/minus .1
+MQ86 /1T1R_10x10/R8/C8/drain_node /1T1R_10x10/R8/C8/gate_node /1T1R_10x10/R8/C8/source_node GND __Q86 l=250n w=2u
+V456 /1T1R_10x10/R8/C8/gate_node /1T1R_10x10/gates8 DC 0 
+XMR86 /1T1R_10x10/R8/C8/top_electrode_node /1T1R_10x10/R8/C8/drain_node IBM_CMO_HfOx_ReRAM
+V457 /1T1R_10x10/row8 /1T1R_10x10/R8/C8/ammeter_drain/plus DC 0 
+V458 /1T1R_10x10/R8/C8/ammeter_drain/minus /1T1R_10x10/R8/C8/top_electrode_node DC 0 
+R176 /1T1R_10x10/R8/C8/ammeter_drain/plus /1T1R_10x10/R8/C8/ammeter_drain/minus .1
+V459 /1T1R_10x10/R8/C8/source_node /1T1R_10x10/R8/C8/ammeter_source/plus DC 0 
+V460 /1T1R_10x10/R8/C8/ammeter_source/minus /1T1R_10x10/col8 DC 0 
+R177 /1T1R_10x10/R8/C8/ammeter_source/plus /1T1R_10x10/R8/C8/ammeter_source/minus .1
+MQ87 /1T1R_10x10/R8/C5/drain_node /1T1R_10x10/R8/C5/gate_node /1T1R_10x10/R8/C5/source_node GND __Q87 l=250n w=2u
+V461 /1T1R_10x10/R8/C5/gate_node /1T1R_10x10/gates8 DC 0 
+XMR87 /1T1R_10x10/R8/C5/top_electrode_node /1T1R_10x10/R8/C5/drain_node IBM_CMO_HfOx_ReRAM
+V462 /1T1R_10x10/row8 /1T1R_10x10/R8/C5/ammeter_drain/plus DC 0 
+V463 /1T1R_10x10/R8/C5/ammeter_drain/minus /1T1R_10x10/R8/C5/top_electrode_node DC 0 
+R178 /1T1R_10x10/R8/C5/ammeter_drain/plus /1T1R_10x10/R8/C5/ammeter_drain/minus .1
+V464 /1T1R_10x10/R8/C5/source_node /1T1R_10x10/R8/C5/ammeter_source/plus DC 0 
+V465 /1T1R_10x10/R8/C5/ammeter_source/minus /1T1R_10x10/col5 DC 0 
+R179 /1T1R_10x10/R8/C5/ammeter_source/plus /1T1R_10x10/R8/C5/ammeter_source/minus .1
+MQ88 /1T1R_10x10/R8/C6/drain_node /1T1R_10x10/R8/C6/gate_node /1T1R_10x10/R8/C6/source_node GND __Q88 l=250n w=2u
+V466 /1T1R_10x10/R8/C6/gate_node /1T1R_10x10/gates8 DC 0 
+XMR88 /1T1R_10x10/R8/C6/top_electrode_node /1T1R_10x10/R8/C6/drain_node IBM_CMO_HfOx_ReRAM
+V467 /1T1R_10x10/row8 /1T1R_10x10/R8/C6/ammeter_drain/plus DC 0 
+V468 /1T1R_10x10/R8/C6/ammeter_drain/minus /1T1R_10x10/R8/C6/top_electrode_node DC 0 
+R180 /1T1R_10x10/R8/C6/ammeter_drain/plus /1T1R_10x10/R8/C6/ammeter_drain/minus .1
+V469 /1T1R_10x10/R8/C6/source_node /1T1R_10x10/R8/C6/ammeter_source/plus DC 0 
+V470 /1T1R_10x10/R8/C6/ammeter_source/minus /1T1R_10x10/col6 DC 0 
+R181 /1T1R_10x10/R8/C6/ammeter_source/plus /1T1R_10x10/R8/C6/ammeter_source/minus .1
+MQ89 /1T1R_10x10/R8/C9/drain_node /1T1R_10x10/R8/C9/gate_node /1T1R_10x10/R8/C9/source_node GND __Q89 l=250n w=2u
+V471 /1T1R_10x10/R8/C9/gate_node /1T1R_10x10/gates8 DC 0 
+XMR89 /1T1R_10x10/R8/C9/top_electrode_node /1T1R_10x10/R8/C9/drain_node IBM_CMO_HfOx_ReRAM
+V472 /1T1R_10x10/row8 /1T1R_10x10/R8/C9/ammeter_drain/plus DC 0 
+V473 /1T1R_10x10/R8/C9/ammeter_drain/minus /1T1R_10x10/R8/C9/top_electrode_node DC 0 
+R182 /1T1R_10x10/R8/C9/ammeter_drain/plus /1T1R_10x10/R8/C9/ammeter_drain/minus .1
+V474 /1T1R_10x10/R8/C9/source_node /1T1R_10x10/R8/C9/ammeter_source/plus DC 0 
+V475 /1T1R_10x10/R8/C9/ammeter_source/minus /1T1R_10x10/col9 DC 0 
+R183 /1T1R_10x10/R8/C9/ammeter_source/plus /1T1R_10x10/R8/C9/ammeter_source/minus .1
+MQ90 /1T1R_10x10/R8/C4/drain_node /1T1R_10x10/R8/C4/gate_node /1T1R_10x10/R8/C4/source_node GND __Q90 l=250n w=2u
+V476 /1T1R_10x10/R8/C4/gate_node /1T1R_10x10/gates8 DC 0 
+XMR90 /1T1R_10x10/R8/C4/top_electrode_node /1T1R_10x10/R8/C4/drain_node IBM_CMO_HfOx_ReRAM
+V477 /1T1R_10x10/row8 /1T1R_10x10/R8/C4/ammeter_drain/plus DC 0 
+V478 /1T1R_10x10/R8/C4/ammeter_drain/minus /1T1R_10x10/R8/C4/top_electrode_node DC 0 
+R184 /1T1R_10x10/R8/C4/ammeter_drain/plus /1T1R_10x10/R8/C4/ammeter_drain/minus .1
+V479 /1T1R_10x10/R8/C4/source_node /1T1R_10x10/R8/C4/ammeter_source/plus DC 0 
+V480 /1T1R_10x10/R8/C4/ammeter_source/minus /1T1R_10x10/col4 DC 0 
+R185 /1T1R_10x10/R8/C4/ammeter_source/plus /1T1R_10x10/R8/C4/ammeter_source/minus .1
+MQ91 /1T1R_10x10/R9/C3/drain_node /1T1R_10x10/R9/C3/gate_node /1T1R_10x10/R9/C3/source_node GND __Q91 l=250n w=2u
+V481 /1T1R_10x10/R9/C3/gate_node /1T1R_10x10/gates9 DC 0 
+XMR91 /1T1R_10x10/R9/C3/top_electrode_node /1T1R_10x10/R9/C3/drain_node IBM_CMO_HfOx_ReRAM
+V482 /1T1R_10x10/row9 /1T1R_10x10/R9/C3/ammeter_drain/plus DC 0 
+V483 /1T1R_10x10/R9/C3/ammeter_drain/minus /1T1R_10x10/R9/C3/top_electrode_node DC 0 
+R186 /1T1R_10x10/R9/C3/ammeter_drain/plus /1T1R_10x10/R9/C3/ammeter_drain/minus .1
+V484 /1T1R_10x10/R9/C3/source_node /1T1R_10x10/R9/C3/ammeter_source/plus DC 0 
+V485 /1T1R_10x10/R9/C3/ammeter_source/minus /1T1R_10x10/col3 DC 0 
+R187 /1T1R_10x10/R9/C3/ammeter_source/plus /1T1R_10x10/R9/C3/ammeter_source/minus .1
+MQ92 /1T1R_10x10/R9/C0/drain_node /1T1R_10x10/R9/C0/gate_node /1T1R_10x10/R9/C0/source_node GND __Q92 l=250n w=2u
+V486 /1T1R_10x10/R9/C0/gate_node /1T1R_10x10/gates9 DC 0 
+XMR92 /1T1R_10x10/R9/C0/top_electrode_node /1T1R_10x10/R9/C0/drain_node IBM_CMO_HfOx_ReRAM
+V487 /1T1R_10x10/row9 /1T1R_10x10/R9/C0/ammeter_drain/plus DC 0 
+V488 /1T1R_10x10/R9/C0/ammeter_drain/minus /1T1R_10x10/R9/C0/top_electrode_node DC 0 
+R188 /1T1R_10x10/R9/C0/ammeter_drain/plus /1T1R_10x10/R9/C0/ammeter_drain/minus .1
+V489 /1T1R_10x10/R9/C0/source_node /1T1R_10x10/R9/C0/ammeter_source/plus DC 0 
+V490 /1T1R_10x10/R9/C0/ammeter_source/minus /1T1R_10x10/col0 DC 0 
+R189 /1T1R_10x10/R9/C0/ammeter_source/plus /1T1R_10x10/R9/C0/ammeter_source/minus .1
+MQ93 /1T1R_10x10/R9/C1/drain_node /1T1R_10x10/R9/C1/gate_node /1T1R_10x10/R9/C1/source_node GND __Q93 l=250n w=2u
+V491 /1T1R_10x10/R9/C1/gate_node /1T1R_10x10/gates9 DC 0 
+XMR93 /1T1R_10x10/R9/C1/top_electrode_node /1T1R_10x10/R9/C1/drain_node IBM_CMO_HfOx_ReRAM
+V492 /1T1R_10x10/row9 /1T1R_10x10/R9/C1/ammeter_drain/plus DC 0 
+V493 /1T1R_10x10/R9/C1/ammeter_drain/minus /1T1R_10x10/R9/C1/top_electrode_node DC 0 
+R190 /1T1R_10x10/R9/C1/ammeter_drain/plus /1T1R_10x10/R9/C1/ammeter_drain/minus .1
+V494 /1T1R_10x10/R9/C1/source_node /1T1R_10x10/R9/C1/ammeter_source/plus DC 0 
+V495 /1T1R_10x10/R9/C1/ammeter_source/minus /1T1R_10x10/col1 DC 0 
+R191 /1T1R_10x10/R9/C1/ammeter_source/plus /1T1R_10x10/R9/C1/ammeter_source/minus .1
+MQ94 /1T1R_10x10/R9/C2/drain_node /1T1R_10x10/R9/C2/gate_node /1T1R_10x10/R9/C2/source_node GND __Q94 l=250n w=2u
+V496 /1T1R_10x10/R9/C2/gate_node /1T1R_10x10/gates9 DC 0 
+XMR94 /1T1R_10x10/R9/C2/top_electrode_node /1T1R_10x10/R9/C2/drain_node IBM_CMO_HfOx_ReRAM
+V497 /1T1R_10x10/row9 /1T1R_10x10/R9/C2/ammeter_drain/plus DC 0 
+V498 /1T1R_10x10/R9/C2/ammeter_drain/minus /1T1R_10x10/R9/C2/top_electrode_node DC 0 
+R192 /1T1R_10x10/R9/C2/ammeter_drain/plus /1T1R_10x10/R9/C2/ammeter_drain/minus .1
+V499 /1T1R_10x10/R9/C2/source_node /1T1R_10x10/R9/C2/ammeter_source/plus DC 0 
+V500 /1T1R_10x10/R9/C2/ammeter_source/minus /1T1R_10x10/col2 DC 0 
+R193 /1T1R_10x10/R9/C2/ammeter_source/plus /1T1R_10x10/R9/C2/ammeter_source/minus .1
+MQ95 /1T1R_10x10/R9/C7/drain_node /1T1R_10x10/R9/C7/gate_node /1T1R_10x10/R9/C7/source_node GND __Q95 l=250n w=2u
+V501 /1T1R_10x10/R9/C7/gate_node /1T1R_10x10/gates9 DC 0 
+XMR95 /1T1R_10x10/R9/C7/top_electrode_node /1T1R_10x10/R9/C7/drain_node IBM_CMO_HfOx_ReRAM
+V502 /1T1R_10x10/row9 /1T1R_10x10/R9/C7/ammeter_drain/plus DC 0 
+V503 /1T1R_10x10/R9/C7/ammeter_drain/minus /1T1R_10x10/R9/C7/top_electrode_node DC 0 
+R194 /1T1R_10x10/R9/C7/ammeter_drain/plus /1T1R_10x10/R9/C7/ammeter_drain/minus .1
+V504 /1T1R_10x10/R9/C7/source_node /1T1R_10x10/R9/C7/ammeter_source/plus DC 0 
+V505 /1T1R_10x10/R9/C7/ammeter_source/minus /1T1R_10x10/col7 DC 0 
+R195 /1T1R_10x10/R9/C7/ammeter_source/plus /1T1R_10x10/R9/C7/ammeter_source/minus .1
+MQ96 /1T1R_10x10/R9/C8/drain_node /1T1R_10x10/R9/C8/gate_node /1T1R_10x10/R9/C8/source_node GND __Q96 l=250n w=2u
+V506 /1T1R_10x10/R9/C8/gate_node /1T1R_10x10/gates9 DC 0 
+XMR96 /1T1R_10x10/R9/C8/top_electrode_node /1T1R_10x10/R9/C8/drain_node IBM_CMO_HfOx_ReRAM
+V507 /1T1R_10x10/row9 /1T1R_10x10/R9/C8/ammeter_drain/plus DC 0 
+V508 /1T1R_10x10/R9/C8/ammeter_drain/minus /1T1R_10x10/R9/C8/top_electrode_node DC 0 
+R196 /1T1R_10x10/R9/C8/ammeter_drain/plus /1T1R_10x10/R9/C8/ammeter_drain/minus .1
+V509 /1T1R_10x10/R9/C8/source_node /1T1R_10x10/R9/C8/ammeter_source/plus DC 0 
+V510 /1T1R_10x10/R9/C8/ammeter_source/minus /1T1R_10x10/col8 DC 0 
+R197 /1T1R_10x10/R9/C8/ammeter_source/plus /1T1R_10x10/R9/C8/ammeter_source/minus .1
+MQ97 /1T1R_10x10/R9/C5/drain_node /1T1R_10x10/R9/C5/gate_node /1T1R_10x10/R9/C5/source_node GND __Q97 l=250n w=2u
+V511 /1T1R_10x10/R9/C5/gate_node /1T1R_10x10/gates9 DC 0 
+XMR97 /1T1R_10x10/R9/C5/top_electrode_node /1T1R_10x10/R9/C5/drain_node IBM_CMO_HfOx_ReRAM
+V512 /1T1R_10x10/row9 /1T1R_10x10/R9/C5/ammeter_drain/plus DC 0 
+V513 /1T1R_10x10/R9/C5/ammeter_drain/minus /1T1R_10x10/R9/C5/top_electrode_node DC 0 
+R198 /1T1R_10x10/R9/C5/ammeter_drain/plus /1T1R_10x10/R9/C5/ammeter_drain/minus .1
+V514 /1T1R_10x10/R9/C5/source_node /1T1R_10x10/R9/C5/ammeter_source/plus DC 0 
+V515 /1T1R_10x10/R9/C5/ammeter_source/minus /1T1R_10x10/col5 DC 0 
+R199 /1T1R_10x10/R9/C5/ammeter_source/plus /1T1R_10x10/R9/C5/ammeter_source/minus .1
+MQ98 /1T1R_10x10/R9/C6/drain_node /1T1R_10x10/R9/C6/gate_node /1T1R_10x10/R9/C6/source_node GND __Q98 l=250n w=2u
+V516 /1T1R_10x10/R9/C6/gate_node /1T1R_10x10/gates9 DC 0 
+XMR98 /1T1R_10x10/R9/C6/top_electrode_node /1T1R_10x10/R9/C6/drain_node IBM_CMO_HfOx_ReRAM
+V517 /1T1R_10x10/row9 /1T1R_10x10/R9/C6/ammeter_drain/plus DC 0 
+V518 /1T1R_10x10/R9/C6/ammeter_drain/minus /1T1R_10x10/R9/C6/top_electrode_node DC 0 
+R200 /1T1R_10x10/R9/C6/ammeter_drain/plus /1T1R_10x10/R9/C6/ammeter_drain/minus .1
+V519 /1T1R_10x10/R9/C6/source_node /1T1R_10x10/R9/C6/ammeter_source/plus DC 0 
+V520 /1T1R_10x10/R9/C6/ammeter_source/minus /1T1R_10x10/col6 DC 0 
+R201 /1T1R_10x10/R9/C6/ammeter_source/plus /1T1R_10x10/R9/C6/ammeter_source/minus .1
+MQ99 /1T1R_10x10/R9/C9/drain_node /1T1R_10x10/R9/C9/gate_node /1T1R_10x10/R9/C9/source_node GND __Q99 l=250n w=2u
+V521 /1T1R_10x10/R9/C9/gate_node /1T1R_10x10/gates9 DC 0 
+XMR99 /1T1R_10x10/R9/C9/top_electrode_node /1T1R_10x10/R9/C9/drain_node IBM_CMO_HfOx_ReRAM
+XV522 /voltage_sources/row5/ammeter/red GND twosource waveform_file=row5_wf_file
+V523 /voltage_sources/row5/ammeter/red /voltage_sources/row5/ammeter/plus DC 0 
+V524 /voltage_sources/row5/ammeter/minus /1T1R_10x10/row5 DC 0 
+R202 /voltage_sources/row5/ammeter/plus /voltage_sources/row5/ammeter/minus .1
+XV525 /voltage_sources/row6/ammeter/red GND twosource waveform_file=row6_wf_file
+V526 /voltage_sources/row6/ammeter/red /voltage_sources/row6/ammeter/plus DC 0 
+V527 /voltage_sources/row6/ammeter/minus /1T1R_10x10/row6 DC 0 
+R203 /voltage_sources/row6/ammeter/plus /voltage_sources/row6/ammeter/minus .1
+XV528 /voltage_sources/row7/ammeter/red GND twosource waveform_file=row7_wf_file
+V529 /voltage_sources/row7/ammeter/red /voltage_sources/row7/ammeter/plus DC 0 
+V530 /voltage_sources/row7/ammeter/minus /1T1R_10x10/row7 DC 0 
+R204 /voltage_sources/row7/ammeter/plus /voltage_sources/row7/ammeter/minus .1
+XV531 /voltage_sources/row8/ammeter/red GND twosource waveform_file=row8_wf_file
+V532 /voltage_sources/row8/ammeter/red /voltage_sources/row8/ammeter/plus DC 0 
+V533 /voltage_sources/row8/ammeter/minus /1T1R_10x10/row8 DC 0 
+R205 /voltage_sources/row8/ammeter/plus /voltage_sources/row8/ammeter/minus .1
+XV534 /voltage_sources/row9/ammeter/red GND twosource waveform_file=row9_wf_file
+V535 /voltage_sources/row9/ammeter/red /voltage_sources/row9/ammeter/plus DC 0 
+V536 /voltage_sources/row9/ammeter/minus /1T1R_10x10/row9 DC 0 
+R206 /voltage_sources/row9/ammeter/plus /voltage_sources/row9/ammeter/minus .1
+XV537 /voltage_sources/gates5/ammeter/red GND twosource waveform_file=gates5_wf_file
+V538 /voltage_sources/gates5/ammeter/red /voltage_sources/gates5/ammeter/plus DC 0 
+V539 /voltage_sources/gates5/ammeter/minus /1T1R_10x10/gates5 DC 0 
+R207 /voltage_sources/gates5/ammeter/plus /voltage_sources/gates5/ammeter/minus .1
+XV540 /voltage_sources/gates6/ammeter/red GND twosource waveform_file=gates6_wf_file
+V541 /voltage_sources/gates6/ammeter/red /voltage_sources/gates6/ammeter/plus DC 0 
+V542 /voltage_sources/gates6/ammeter/minus /1T1R_10x10/gates6 DC 0 
+R208 /voltage_sources/gates6/ammeter/plus /voltage_sources/gates6/ammeter/minus .1
+XV543 /voltage_sources/gates7/ammeter/red GND twosource waveform_file=gates7_wf_file
+V544 /voltage_sources/gates7/ammeter/red /voltage_sources/gates7/ammeter/plus DC 0 
+V545 /voltage_sources/gates7/ammeter/minus /1T1R_10x10/gates7 DC 0 
+R209 /voltage_sources/gates7/ammeter/plus /voltage_sources/gates7/ammeter/minus .1
+XV546 /voltage_sources/gates8/ammeter/red GND twosource waveform_file=gates8_wf_file
+V547 /voltage_sources/gates8/ammeter/red /voltage_sources/gates8/ammeter/plus DC 0 
+V548 /voltage_sources/gates8/ammeter/minus /1T1R_10x10/gates8 DC 0 
+R210 /voltage_sources/gates8/ammeter/plus /voltage_sources/gates8/ammeter/minus .1
+XV549 /voltage_sources/gates9/ammeter/red GND twosource waveform_file=gates9_wf_file
+V550 /voltage_sources/gates9/ammeter/red /voltage_sources/gates9/ammeter/plus DC 0 
+V551 /voltage_sources/gates9/ammeter/minus /1T1R_10x10/gates9 DC 0 
+R211 /voltage_sources/gates9/ammeter/plus /voltage_sources/gates9/ammeter/minus .1
+V552 /1T1R_10x10/row9 /1T1R_10x10/R9/C9/ammeter_drain/plus DC 0 
+V553 /1T1R_10x10/R9/C9/ammeter_drain/minus /1T1R_10x10/R9/C9/top_electrode_node DC 0 
+R212 /1T1R_10x10/R9/C9/ammeter_drain/plus /1T1R_10x10/R9/C9/ammeter_drain/minus .1
+V554 /1T1R_10x10/R9/C9/source_node /1T1R_10x10/R9/C9/ammeter_source/plus DC 0 
+V555 /1T1R_10x10/R9/C9/ammeter_source/minus /1T1R_10x10/col9 DC 0 
+R213 /1T1R_10x10/R9/C9/ammeter_source/plus /1T1R_10x10/R9/C9/ammeter_source/minus .1
+MQ100 /1T1R_10x10/R9/C4/drain_node /1T1R_10x10/R9/C4/gate_node /1T1R_10x10/R9/C4/source_node GND __Q100 l=250n w=2u
+V556 /1T1R_10x10/R9/C4/gate_node /1T1R_10x10/gates9 DC 0 
+XMR100 /1T1R_10x10/R9/C4/top_electrode_node /1T1R_10x10/R9/C4/drain_node IBM_CMO_HfOx_ReRAM
+V557 /1T1R_10x10/row9 /1T1R_10x10/R9/C4/ammeter_drain/plus DC 0 
+V558 /1T1R_10x10/R9/C4/ammeter_drain/minus /1T1R_10x10/R9/C4/top_electrode_node DC 0 
+R214 /1T1R_10x10/R9/C4/ammeter_drain/plus /1T1R_10x10/R9/C4/ammeter_drain/minus .1
+V559 /1T1R_10x10/R9/C4/source_node /1T1R_10x10/R9/C4/ammeter_source/plus DC 0 
+V560 /1T1R_10x10/R9/C4/ammeter_source/minus /1T1R_10x10/col4 DC 0 
+R215 /1T1R_10x10/R9/C4/ammeter_source/plus /1T1R_10x10/R9/C4/ammeter_source/minus .1
+V561 /voltage_sources/row0/ammeter/red /voltage_sources/row0/ammeter/plus DC 0 
+V562 /voltage_sources/row0/ammeter/minus /1T1R_10x10/row0 DC 0 
+R216 /voltage_sources/row0/ammeter/plus /voltage_sources/row0/ammeter/minus .1
+V563 /voltage_sources/row1/ammeter/red /voltage_sources/row1/ammeter/plus DC 0 
+V564 /voltage_sources/row1/ammeter/minus /1T1R_10x10/row1 DC 0 
+R217 /voltage_sources/row1/ammeter/plus /voltage_sources/row1/ammeter/minus .1
+V565 /voltage_sources/row2/ammeter/red /voltage_sources/row2/ammeter/plus DC 0 
+V566 /voltage_sources/row2/ammeter/minus /1T1R_10x10/row2 DC 0 
+R218 /voltage_sources/row2/ammeter/plus /voltage_sources/row2/ammeter/minus .1
+V567 /voltage_sources/row3/ammeter/red /voltage_sources/row3/ammeter/plus DC 0 
+V568 /voltage_sources/row3/ammeter/minus /1T1R_10x10/row3 DC 0 
+R219 /voltage_sources/row3/ammeter/plus /voltage_sources/row3/ammeter/minus .1
+V569 /voltage_sources/row4/ammeter/red /voltage_sources/row4/ammeter/plus DC 0 
+V570 /voltage_sources/row4/ammeter/minus /1T1R_10x10/row4 DC 0 
+R220 /voltage_sources/row4/ammeter/plus /voltage_sources/row4/ammeter/minus .1
+V571 /voltage_sources/col0/ammeter/red /voltage_sources/col0/ammeter/plus DC 0 
+V572 /voltage_sources/col0/ammeter/minus /1T1R_10x10/col0 DC 0 
+R221 /voltage_sources/col0/ammeter/plus /voltage_sources/col0/ammeter/minus .1
+V573 /voltage_sources/col1/ammeter/red /voltage_sources/col1/ammeter/plus DC 0 
+V574 /voltage_sources/col1/ammeter/minus /1T1R_10x10/col1 DC 0 
+R222 /voltage_sources/col1/ammeter/plus /voltage_sources/col1/ammeter/minus .1
+V575 /voltage_sources/col2/ammeter/red /voltage_sources/col2/ammeter/plus DC 0 
+V576 /voltage_sources/col2/ammeter/minus /1T1R_10x10/col2 DC 0 
+R223 /voltage_sources/col2/ammeter/plus /voltage_sources/col2/ammeter/minus .1
+V577 /voltage_sources/col3/ammeter/red /voltage_sources/col3/ammeter/plus DC 0 
+V578 /voltage_sources/col3/ammeter/minus /1T1R_10x10/col3 DC 0 
+R224 /voltage_sources/col3/ammeter/plus /voltage_sources/col3/ammeter/minus .1
+V579 /voltage_sources/col4/ammeter/red /voltage_sources/col4/ammeter/plus DC 0 
+V580 /voltage_sources/col4/ammeter/minus /1T1R_10x10/col4 DC 0 
+R225 /voltage_sources/col4/ammeter/plus /voltage_sources/col4/ammeter/minus .1
+V581 /voltage_sources/gates0/ammeter/red /voltage_sources/gates0/ammeter/plus DC 0 
+V582 /voltage_sources/gates0/ammeter/minus /1T1R_10x10/gates0 DC 0 
+R226 /voltage_sources/gates0/ammeter/plus /voltage_sources/gates0/ammeter/minus .1
+V583 /voltage_sources/gates1/ammeter/red /voltage_sources/gates1/ammeter/plus DC 0 
+V584 /voltage_sources/gates1/ammeter/minus /1T1R_10x10/gates1 DC 0 
+R227 /voltage_sources/gates1/ammeter/plus /voltage_sources/gates1/ammeter/minus .1
+V585 /voltage_sources/gates2/ammeter/red /voltage_sources/gates2/ammeter/plus DC 0 
+V586 /voltage_sources/gates2/ammeter/minus /1T1R_10x10/gates2 DC 0 
+R228 /voltage_sources/gates2/ammeter/plus /voltage_sources/gates2/ammeter/minus .1
+V587 /voltage_sources/gates3/ammeter/red /voltage_sources/gates3/ammeter/plus DC 0 
+V588 /voltage_sources/gates3/ammeter/minus /1T1R_10x10/gates3 DC 0 
+R229 /voltage_sources/gates3/ammeter/plus /voltage_sources/gates3/ammeter/minus .1
+V589 /voltage_sources/gates4/ammeter/red /voltage_sources/gates4/ammeter/plus DC 0 
+V590 /voltage_sources/gates4/ammeter/minus /1T1R_10x10/gates4 DC 0 
+R230 /voltage_sources/gates4/ammeter/plus /voltage_sources/gates4/ammeter/minus .1
+.end
