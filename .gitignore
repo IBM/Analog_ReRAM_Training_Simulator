@@ -1,6 +1,6 @@
-__pycache__/
+__pycache__
 .DS_Store
 *.log
 simulation_output/
 waveforms/*
-__pycache__/
+*.kicad_sch
